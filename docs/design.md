@@ -9,7 +9,7 @@ instruction system with three responsibilities and three corresponding files.
 global AGENTS.md activation
         ↓
 skills/smallest-complete/SKILL.md
-        ↓ only for non-trivial software work
+        ↓ only for non-trivial coding or architecture work
 references/elegant-architecture.md
 ```
 
@@ -35,11 +35,11 @@ It does not duplicate the Skill body. Global context stays small.
 - calibrate claims to evidence;
 - stop when the current job is complete.
 
-This applies to software, research, analysis, writing, documents, presentations,
-and operations. It deliberately does not force software architecture language
-onto ordinary knowledge work.
+This applies to coding, architecture, research, analysis, writing, documents,
+presentations, and operations. It deliberately does not force software
+architecture language onto ordinary knowledge work.
 
-### Conditional reference: shape software without bloating every task
+### Conditional reference: shape code and architecture without bloating every task
 
 [`elegant-architecture.md`](../skills/smallest-complete/references/elegant-architecture.md)
 loads only for architecture, system design, non-trivial coding, refactoring,
@@ -62,7 +62,7 @@ material risk require them.
 
 The project uses progressive disclosure. The activation paragraph is always
 available, the core Skill loads for qualifying work, and the architecture
-reference loads only when the task is actually about software.
+reference loads only when the task is actually about coding or architecture.
 
 That avoids two symmetric failures:
 

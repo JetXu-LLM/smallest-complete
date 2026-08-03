@@ -1,6 +1,6 @@
 ---
 name: smallest-complete
-description: "Complete complex agentic work within the user's actual authorization: define the smallest fully working outcome, keep inquiry broad enough to support it, resolve conflicting acceptance criteria, preserve required behavior, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for complex, ambiguous, multi-step, long-running, delegated, resumed, or implementation-heavy work across Codex and ChatGPT Work, including software changes, debugging, refactoring, architecture, research, analysis, documents, presentations, and operations. For non-trivial software work, also read the bundled elegant-architecture reference. Do not use for simple questions, trivial transformations, or obviously local edits that cannot expand in scope."
+description: "Complete complex agentic work within the user's actual authorization: define the smallest fully working outcome, keep inquiry broad enough to support it, resolve conflicting acceptance criteria, preserve required behavior, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for complex, ambiguous, multi-step, long-running, delegated, resumed, or implementation-heavy work across Codex and ChatGPT Work, including code changes, debugging, refactoring, architecture, research, analysis, documents, presentations, and operations. For non-trivial coding, debugging, refactoring, migration, system design, or architecture work, also read the bundled elegant-architecture reference. Do not use for simple questions, trivial transformations, or obviously local edits that cannot expand in scope."
 ---
 
 # Smallest Complete
@@ -59,7 +59,7 @@ before implementation, costly validation, or irreversible action. Do not pick
 one implicitly or invent a deterministic guard, workflow, or subsystem to make
 the contradiction appear solved.
 
-## Load the Software Architecture Guidance Only for Software Work
+## Load the Architecture Guidance Only for Coding and Architecture Work
 
 For architecture design, system design, non-trivial coding, refactoring,
 migration, or debugging that may change structure, ownership, control flow,
@@ -77,7 +77,9 @@ new abstraction, state, branch, compatibility path, or coordination logic.
 
 For ChatGPT Work tasks such as research, analysis, writing, documents, slides,
 spreadsheets, communication, or ordinary knowledge work, do not read the
-software architecture reference unless the actual subject is software design.
+software architecture reference unless the actual subject is code or software
+architecture.
+
 Apply the core scope, completion, evidence, and stopping rules in this file
 directly.
 

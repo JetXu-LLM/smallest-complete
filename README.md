@@ -1,12 +1,10 @@
 <div align="center">
 
-# Smallest Complete
-
-### Stop one task from becoming ten.
+# Smallest Complete — Stop one task from becoming ten.
 
 A lightweight Skill for Codex and ChatGPT agents: finish exactly what was asked,
-prove it works, and stop before the side quests. For non-trivial software work,
-it also applies an
+prove it works, and stop before the side quests. For non-trivial coding and
+architecture work, it also applies an
 [`elegant-architecture`](skills/smallest-complete/references/elegant-architecture.md)
 lens—clear control, explicit ownership, and only the state the real job requires.
 
@@ -20,24 +18,6 @@ lens—clear control, explicit ownership, and only the state the real job requir
 </div>
 
 ![Four-panel comic: a developer asks an agent to fix one button; the agent builds a state machine, sync layer, recovery system, and version history; Smallest Complete brings it back to a fixed and tested button](docs/assets/export-button-empire.webp)
-
-<p align="center"><em>Fix the button. Not the universe.</em></p>
-
-## One Skill, two disciplines
-
-Smallest Complete watches for the same failure at two moments: doing more than
-was authorized, and building necessary software more tangled than the evidence
-requires.
-
-| | **Scope discipline** | **Architecture discipline** |
-| --- | --- | --- |
-| **Applies to** | Complex agentic work—software or ChatGPT Work | Non-trivial software and architecture work only |
-| **Question** | Is this inside what was actually authorized? | Is this the clearest structure the evidence requires? |
-| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, shared workflow state, and tangled coordination |
-| **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference |
-
-First it keeps the result inside the ask. Then, when the result must become
-software, it keeps the structure clear.
 
 ## Install with one prompt
 
@@ -57,7 +37,23 @@ the Skill, and verifies the result. When it finishes, start a new task.
 | --- | --- | --- |
 | One Skill directory + one global activation block | Existing Skills and `AGENTS.md` instructions | Runtime, hooks, dependencies, accounts, or telemetry |
 
-## When software really needs architecture
+## One Skill, two disciplines
+
+Smallest Complete watches for the same failure at two moments: doing more than
+was authorized, and making necessary code or architecture more tangled than
+the evidence requires.
+
+| | **Scope discipline** | **Architecture discipline** |
+| --- | --- | --- |
+| **Applies to** | Complex Codex and ChatGPT Work tasks | Non-trivial coding, debugging, refactoring, migration, system design, or architecture work |
+| **Question** | Is this inside what was actually authorized? | Is this the clearest structure the evidence requires? |
+| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, shared workflow state, and tangled coordination |
+| **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference |
+
+First it keeps the result inside the ask. Then, when the task genuinely requires
+code or architecture, it keeps the structure clear.
+
+## When the task really needs architecture
 
 Scope discipline decides whether something belongs in the job. Architecture
 discipline decides whether the necessary software structure has earned its
@@ -104,7 +100,7 @@ actions—not to useful thinking.
 | **Telemetry** | None |
 | **Guarantee** | None—it is guidance for capable agents, not an enforcement layer |
 
-The complete mechanism is one Skill, one conditional software reference, and
+The complete mechanism is one Skill, one conditional architecture reference, and
 one activation paragraph. The project practices what it asks agents to do.
 
 ## Go deeper
