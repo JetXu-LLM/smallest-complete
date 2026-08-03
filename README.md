@@ -69,7 +69,7 @@ operations, the Skill reads
 [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md)
 before planning or editing.
 
-[![Architecture comparison: accidental complexity with overlapping decision owners and shared state versus elegant architecture with one control path, independent capability modules, honest state, and bounded agent judgment](docs/assets/elegant-architecture.svg)](skills/smallest-complete/references/elegant-architecture.md)
+[![Architecture comparison: accidental complexity with overlapping decision owners and shared state versus elegant architecture with one control path, independent capability modules, honest state, and bounded agent judgment](docs/assets/elegant-architecture.png)](skills/smallest-complete/references/elegant-architecture.md)
 
 [Read the complete architecture guidance →](skills/smallest-complete/references/elegant-architecture.md)
 
