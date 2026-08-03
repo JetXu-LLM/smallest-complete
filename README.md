@@ -113,10 +113,25 @@ one activation paragraph. The project practices what it asks agents to do.
 - [The exact global activation block](install/AGENTS.append.md)
 - [Contributing](CONTRIBUTING.md)
 
-## Help the next developer find it
+## Bring us the case we missed
 
-If Smallest Complete saved a small fix from becoming a new infrastructure
-department, star the repo before the next side quest ships.
+The most useful contribution is not agreement. It is a concrete task where the
+Skill helped, failed, made no difference, activated at the wrong time, or gave
+architecture advice that was wrong for the real system.
+
+Comparative runs and counterexamples are especially welcome. You do not need to
+propose a fix—a sanitized prompt, expected result, observed behavior, and the
+available evidence are enough to start.
+
+[Open a behavior report →](https://github.com/JetXu-LLM/smallest-complete/issues/new?template=behavior-report.yml)
+· [See what makes a useful contribution →](CONTRIBUTING.md)
+
+## Star it if it earned it
+
+If Smallest Complete stopped one bounded task from becoming an architecture
+project—or helped you build the architecture the task actually needed—click
+**Star** at the top of this page. It helps the next developer find it before
+their next five-line fix becomes a framework.
 
 ## License
 

@@ -1,55 +1,99 @@
-# Contributing
+# Contributing to Smallest Complete
 
-Thanks for helping Smallest Complete become more effective without becoming the
-kind of system it is meant to prevent.
+Smallest Complete gets better when people bring evidence—not only success
+stories, but failed runs, comparisons where it made no difference, and cases
+that prove its guidance wrong.
 
-## Start with an observed behavior
+Short on time? [Open a behavior report](https://github.com/JetXu-LLM/smallest-complete/issues/new?template=behavior-report.yml).
+You do not need a proposed fix. A sanitized, specific case is already a useful
+contribution.
 
-The strongest contribution begins with a concrete task where the current Skill:
+## What to bring
 
-- failed to activate when it should have;
-- activated on a trivial task and added friction;
-- suppressed useful inquiry or craft;
-- allowed unauthorized scope expansion;
-- encouraged under-delivery;
-- created a conflict between current requirements;
-- loaded the software architecture reference in the wrong context.
+| Contribution | Useful when |
+| --- | --- |
+| **Behavior report** | The Skill expanded the task, stopped too early, failed to stop, suppressed useful inquiry, or activated in the wrong context. |
+| **Comparative test** | You ran the same task with and without the Skill and observed a difference—or no meaningful difference. |
+| **Counterexample** | A scope or architecture principle was wrong for the real job: more state, another control path, a compatibility layer, or broader work was genuinely necessary. |
+| **Documentation fix** | The README, installation guide, or project explanation is unclear, inaccurate, or overstates the evidence. |
+| **Skill or guidance change** | You can connect a concrete failure or failure family to a focused improvement in the Skill or its architecture reference. |
 
-Open a behavior report before proposing a large rewrite. Include the model,
-harness, version, task, expected outcome, observed result, and safe evidence.
-Redact private code, credentials, customer data, and personal information.
+Positive results are welcome too. If the Skill prevented overreach, preserved
+useful inquiry, or made an architecture materially clearer, show the task and
+the observable difference. Please do not turn one good run into a universal
+effectiveness claim.
 
-## Contribution boundaries
+## Make the case usable
 
-- Keep the project focused on scope, completion, evidence, stopping, and the
-  conditional software architecture guidance.
-- Do not add a runtime, hook, state store, service, framework, mode system, or
-  platform adapter without repeated evidence that the current mechanism cannot
-  meet a present requirement.
-- Do not turn one model-specific anecdote into a universal rule.
-- Preserve the distinction between broad inquiry and bounded deliverables,
-  changes, and actions.
-- Preserve the distinction between “smallest” and “incomplete.”
-- Keep public documentation in English and avoid invented effectiveness claims.
+Use the
+[behavior report template](https://github.com/JetXu-LLM/smallest-complete/issues/new?template=behavior-report.yml)
+when possible. For an issue, comment, or pull request, this compact record is
+enough to start:
 
-## Changing the Skill
+```text
+Environment: model, reasoning effort, Codex or ChatGPT surface, version if known
+Task: the sanitized request and only the instructions needed to understand it
+Expected: the observable result and intended scope
+Observed: what the agent delivered, changed, omitted, or kept doing
+Evidence: transcript excerpt, diff, test, screenshot, or reproduction steps
+Pattern: one-off, repeated, or unknown—and what changed between runs
+```
+
+Keep prompts and outputs close to verbatim where publication is safe;
+paraphrasing can hide the behavior that matters. Remove secrets, credentials,
+private code, customer data, personal information, and anything you are not
+authorized to publish. Missing version information is fine when it is unknown.
+Missing evidence makes the report much harder to act on.
+
+See [the evaluation guide](docs/evaluation.md) for ways to compare behavior
+without claiming more than a test demonstrates.
+
+## Counterexamples are especially valuable
+
+The project treats its principles as strong defaults, not laws of nature. We
+want cases where Smallest Complete's own advice becomes the problem, including:
+
+- the smallest-looking path under-delivered or moved complexity elsewhere;
+- broader investigation or implementation was required to complete the actual
+  request;
+- additional state was the honest representation of a business fact;
+- multiple control paths reflected genuinely different workflows;
+- compatibility or recovery machinery was a present requirement rather than
+  speculative future-proofing;
+- agent judgment was too variable for a rule that needed deterministic code.
+
+Explain what would have failed if the allegedly “extra” mechanism were removed.
+A strong counterexample can improve the guidance even when it never becomes a
+code or wording change.
+
+## Changing the Skill or its guidance
 
 The installable source of truth is
 [`skills/smallest-complete`](skills/smallest-complete).
 
-For a Skill change:
+For a non-trivial Skill change:
 
-1. Explain the observed failure and why the current wording does not cover it.
-2. Propose the smallest change that fixes the failure family rather than one
-   transcript's wording.
-3. Check that `SKILL.md`, `agents/openai.yaml`, and the conditional reference
-   remain consistent.
-4. Test positive, negative, and boundary prompts with isolated runs when
-   possible.
-5. Report what the evidence demonstrates and what remains unknown.
+1. Open an issue describing the observed failure and available evidence before
+   opening a pull request.
+2. Explain why the case exposes a broader failure family rather than only one
+   transcript's wording. A single case can still be decisive when it reveals a
+   clear contradiction or unsafe instruction.
+3. Propose the smallest change that addresses that failure without weakening
+   unrelated behavior.
+4. Check `SKILL.md`, `agents/openai.yaml`, and the conditional architecture
+   reference for consistency.
+5. Test positive, negative, and boundary prompts with isolated runs when
+   practical.
+6. Report what the evidence demonstrates and what remains unknown.
 
-Keep `SKILL.md` under 500 lines. Put software-only detail in the existing
-conditional reference rather than expanding the core Skill for every task.
+Keep `SKILL.md` under 500 lines. Put coding- and architecture-specific detail in
+the existing conditional reference instead of expanding the core Skill for
+every task.
+
+Do not add a runtime, hook, state store, service, framework, mode system, or
+platform adapter unless repeated evidence shows that the current mechanism
+cannot meet a present requirement. Preserve the distinctions between broad
+inquiry and bounded action, and between “smallest” and “incomplete.”
 
 ## Changing installation or documentation
 
@@ -57,8 +101,10 @@ conditional reference rather than expanding the core Skill for every task.
   Skill plus one global activation block.
 - `install/AGENTS.append.md` is the single source of truth for that block.
 - Preserve existing user instructions and stop on conflicting local edits.
-- Keep README links relative and verify every referenced file exists.
-- The hero can be witty; technical claims must remain literal.
+- Keep README links relative where practical and verify every referenced file.
+- Keep public documentation and contributions in English.
+- The hero can be witty; technical and effectiveness claims must remain literal
+  and evidence-calibrated.
 
 ## Pull requests
 
@@ -72,3 +118,6 @@ Keep each pull request focused on one observed problem. Include:
 Before submitting, read the complete diff as a user and as an agent. Remove any
 addition whose omission would not break required behavior, a hard rule, or the
 clarity of the requested artifact.
+
+Bring the strongest case you have—especially one that shows this project is
+wrong. That is how the guidance becomes less dogmatic and more useful.
