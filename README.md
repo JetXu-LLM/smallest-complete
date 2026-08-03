@@ -4,8 +4,11 @@
 
 ### Stop one task from becoming ten.
 
-A lightweight Skill that helps Codex and ChatGPT agents finish the ask,
-prove it works, and stop before the side quests.
+A lightweight Skill for Codex and ChatGPT agents: finish exactly what was asked,
+prove it works, and stop before the side quests. For non-trivial software work,
+it also applies an
+[`elegant-architecture`](skills/smallest-complete/references/elegant-architecture.md)
+lens—clear control, explicit ownership, and only the state the real job requires.
 
 <p>
   <img alt="Installer: Codex" src="https://img.shields.io/badge/installer-Codex-0F64B5?style=flat-square">
@@ -19,6 +22,22 @@ prove it works, and stop before the side quests.
 ![Four-panel comic: a developer asks an agent to fix one button; the agent builds a state machine, sync layer, recovery system, and version history; Smallest Complete brings it back to a fixed and tested button](docs/assets/export-button-empire.webp)
 
 <p align="center"><em>Fix the button. Not the universe.</em></p>
+
+## One Skill, two disciplines
+
+Smallest Complete watches for the same failure at two moments: doing more than
+was authorized, and building necessary software more tangled than the evidence
+requires.
+
+| | **Scope discipline** | **Architecture discipline** |
+| --- | --- | --- |
+| **Applies to** | Complex agentic work—software or ChatGPT Work | Non-trivial software and architecture work only |
+| **Question** | Is this inside what was actually authorized? | Is this the clearest structure the evidence requires? |
+| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, shared workflow state, and tangled coordination |
+| **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference |
+
+First it keeps the result inside the ask. Then, when the result must become
+software, it keeps the structure clear.
 
 ## Install with one prompt
 
@@ -38,16 +57,23 @@ the Skill, and verifies the result. When it finishes, start a new task.
 | --- | --- | --- |
 | One Skill directory + one global activation block | Existing Skills and `AGENTS.md` instructions | Runtime, hooks, dependencies, accounts, or telemetry |
 
-## The whole idea
+## When software really needs architecture
 
-```mermaid
-flowchart LR
-    A["Your request"] --> B{"Required for the result?"}
-    B -- "Yes" --> C["Do it"]
-    C --> D["Validate the real outcome"]
-    D --> E["Stop"]
-    B -- "No" --> F["Leave it out"]
-```
+Scope discipline decides whether something belongs in the job. Architecture
+discipline decides whether the necessary software structure has earned its
+ongoing cost.
+
+For architecture design, non-trivial coding, refactoring, migration, or
+debugging that may change ownership, control flow, state, interfaces, or
+operations, the Skill reads
+[`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md)
+before planning or editing.
+
+[![Architecture comparison: accidental complexity with overlapping decision owners and shared state versus elegant architecture with one control path, independent capability modules, honest state, and bounded agent judgment](docs/assets/elegant-architecture.svg)](skills/smallest-complete/references/elegant-architecture.md)
+
+[Read the complete architecture guidance →](skills/smallest-complete/references/elegant-architecture.md)
+
+## The core contract
 
 | Principle | Meaning |
 | --- | --- |
@@ -61,12 +87,8 @@ flowchart LR
 | You ask | Smallest Complete response |
 | --- | --- |
 | “Fix CSV export when descriptions contain commas.” | Fix escaping at the owning boundary, test it, stop. No export platform. |
+| “Refactor this ingestion workflow.” | Keep one clear control path, a thin coordinator, capability-owned rules, and only required state. No parallel architecture “just in case.” |
 | “Turn these notes into five slides.” | Research what the deck needs, deliver five strong slides, stop. No brand system. |
-
-For non-trivial software work, the Skill also loads an
-[`elegant-architecture`](skills/smallest-complete/references/elegant-architecture.md)
-design lens: clear ownership, one primary control path, a simple coordinator,
-and only the state the real job requires.
 
 For research, writing, analysis, and other ChatGPT Work tasks, inquiry stays as
 broad as the requested result needs. The boundary applies to deliverables and
@@ -87,6 +109,7 @@ one activation paragraph. The project practices what it asks agents to do.
 
 ## Go deeper
 
+- [The complete elegant-architecture reference](skills/smallest-complete/references/elegant-architecture.md)
 - [Why capable agents expand the mission](docs/why.md)
 - [Design and architectural choices](docs/design.md)
 - [Evaluation without invented success rates](docs/evaluation.md)

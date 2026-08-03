@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Accidental Complexity vs. Elegant Architecture</title>
+  <desc id="desc">A professional architecture comparison. The left side shows overlapping decision owners, global workflow state, compatibility paths, recovery scaffolding, and tangled coordination. The right side shows a request flowing through a thin coordinator and independent capability modules to an observable result, supported by durable business facts, minimum recovery state, bounded agent judgment, and deterministic protections.</desc>
+
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D85B58"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#087F73"/>
+    </marker>
+    <style>
+      .font { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .title { font-size: 46px; font-weight: 760; fill: #10233F; letter-spacing: -1.2px; }
+      .subtitle { font-size: 21px; font-weight: 450; fill: #526277; }
+      .eyebrow { font-size: 15px; font-weight: 760; letter-spacing: 2.2px; }
+      .panel-title { font-size: 27px; font-weight: 760; fill: #10233F; }
+      .node-title { font-size: 17px; font-weight: 720; fill: #172B4D; }
+      .node-sub { font-size: 14px; font-weight: 500; fill: #627188; }
+      .small-cap { font-size: 12px; font-weight: 760; letter-spacing: 1.2px; }
+      .takeaway { font-size: 25px; font-weight: 670; fill: #10233F; letter-spacing: -0.2px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#F4F7FA"/>
+  <path d="M0 0H1600V10H0Z" fill="#10233F"/>
+  <g opacity="0.34" stroke="#D8E0E9" stroke-width="1">
+    <path d="M50 145H1550"/>
+    <path d="M800 170V758" stroke-dasharray="4 10"/>
+  </g>
+
+  <g class="font">
+    <text x="60" y="78" class="eyebrow" fill="#087F73">SMALLEST COMPLETE · SOFTWARE DESIGN LENS</text>
+    <text x="60" y="128" class="title">Accidental Complexity vs. Elegant Architecture</text>
+    <text x="60" y="161" class="subtitle">Two structures for the same job—one accumulated by reaction, one built around clear ownership.</text>
+
+    <!-- Left panel -->
+    <g filter="url(#shadow)">
+      <rect x="50" y="195" width="710" height="560" rx="22" fill="#FFFFFF" stroke="#E3E8EF" stroke-width="2"/>
+    </g>
+    <rect x="50" y="195" width="8" height="560" rx="4" fill="#D85B58"/>
+    <circle cx="96" cy="242" r="20" fill="#FBE9E8"/>
+    <text x="96" y="248" text-anchor="middle" class="small-cap" fill="#B43D3A">01</text>
+    <text x="130" y="251" class="panel-title">Accidental complexity</text>
+    <text x="130" y="278" class="node-sub">Every new concern creates another owner, path, or state.</text>
+
+    <!-- Left tangled network -->
+    <g fill="none" stroke="#D85B58" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-red)" opacity="0.72">
+      <path d="M203 367 C300 352, 320 430, 425 420"/>
+      <path d="M575 359 C510 386, 520 431, 441 447"/>
+      <path d="M202 572 C300 556, 320 495, 425 468"/>
+      <path d="M588 575 C520 550, 505 492, 454 473"/>
+      <path d="M265 347 C390 330, 515 374, 587 530"/>
+      <path d="M574 345 C458 325, 315 397, 213 536"/>
+      <path d="M259 584 C395 632, 500 610, 573 566"/>
+    </g>
+
+    <g>
+      <rect x="105" y="323" width="200" height="82" rx="13" fill="#FFF5F4" stroke="#E7A5A2" stroke-width="2"/>
+      <text x="205" y="354" text-anchor="middle" class="small-cap" fill="#B43D3A">DECISION OWNER</text>
+      <text x="205" y="383" text-anchor="middle" class="node-title">Agent router</text>
+
+      <rect x="505" y="318" width="200" height="82" rx="13" fill="#FFF5F4" stroke="#E7A5A2" stroke-width="2"/>
+      <text x="605" y="349" text-anchor="middle" class="small-cap" fill="#B43D3A">DECISION OWNER</text>
+      <text x="605" y="378" text-anchor="middle" class="node-title">Scheduler</text>
+
+      <rect x="307" y="405" width="200" height="104" rx="15" fill="#B43D3A" stroke="#92302E" stroke-width="2"/>
+      <text x="407" y="441" text-anchor="middle" class="small-cap" fill="#FFECEB">SHARED BY EVERYONE</text>
+      <text x="407" y="473" text-anchor="middle" font-size="19" font-weight="760" fill="#FFFFFF">Global workflow state</text>
+
+      <rect x="105" y="530" width="200" height="82" rx="13" fill="#FFF5F4" stroke="#E7A5A2" stroke-width="2"/>
+      <text x="205" y="561" text-anchor="middle" class="small-cap" fill="#B43D3A">MORE PATHS</text>
+      <text x="205" y="590" text-anchor="middle" class="node-title">Compatibility layers</text>
+
+      <rect x="505" y="530" width="200" height="82" rx="13" fill="#FFF5F4" stroke="#E7A5A2" stroke-width="2"/>
+      <text x="605" y="561" text-anchor="middle" class="small-cap" fill="#B43D3A">MORE PATHS</text>
+      <text x="605" y="590" text-anchor="middle" class="node-title">Recovery scaffolding</text>
+    </g>
+
+    <rect x="145" y="652" width="570" height="64" rx="12" fill="#FFF8F7" stroke="#F0C0BE"/>
+    <text x="430" y="678" text-anchor="middle" class="small-cap" fill="#B43D3A">TANGLED COORDINATION</text>
+    <text x="430" y="701" text-anchor="middle" class="node-sub">More combinations to preserve; no single place owns the path.</text>
+
+    <!-- Center transition -->
+    <circle cx="805" cy="475" r="34" fill="#10233F"/>
+    <path d="M790 475H819M809 464L821 475L809 486" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Right panel -->
+    <g filter="url(#shadow)">
+      <rect x="850" y="195" width="700" height="560" rx="22" fill="#FFFFFF" stroke="#E3E8EF" stroke-width="2"/>
+    </g>
+    <rect x="1542" y="195" width="8" height="560" rx="4" fill="#087F73"/>
+    <circle cx="896" cy="242" r="20" fill="#E1F3F0"/>
+    <text x="896" y="248" text-anchor="middle" class="small-cap" fill="#087F73">02</text>
+    <text x="930" y="251" class="panel-title">Elegant architecture</text>
+    <text x="930" y="278" class="node-sub">One control path. Capabilities own their rules. State stays honest.</text>
+
+    <!-- Right bounded judgment -->
+    <rect x="895" y="307" width="282" height="64" rx="13" fill="#EFF4FB" stroke="#AFC2DD" stroke-width="1.5"/>
+    <text x="915" y="333" class="small-cap" fill="#2D5B90">AGENT · ADAPTIVE TAIL</text>
+    <text x="915" y="355" class="node-sub">Ambiguous · context-dependent · reversible</text>
+
+    <rect x="1205" y="307" width="300" height="64" rx="13" fill="#F0F7F5" stroke="#A4CEC6" stroke-width="1.5"/>
+    <text x="1225" y="333" class="small-cap" fill="#087F73">DETERMINISTIC BOUNDARY</text>
+    <text x="1225" y="355" class="node-sub">Hard rules · data integrity · irreversible effects</text>
+
+    <!-- Right primary flow -->
+    <g fill="none" stroke="#087F73" stroke-width="3" marker-end="url(#arrow-teal)">
+      <path d="M1000 455H1030"/>
+      <path d="M1182 455H1212"/>
+      <path d="M1404 455H1434"/>
+    </g>
+    <g fill="none" stroke="#5A7DA8" stroke-width="2" stroke-dasharray="6 6">
+      <path d="M1037 371V398"/>
+      <path d="M1348 371V398"/>
+    </g>
+
+    <rect x="885" y="414" width="115" height="82" rx="13" fill="#F7FAFC" stroke="#B8C4D2" stroke-width="2"/>
+    <text x="942" y="448" text-anchor="middle" class="small-cap" fill="#526277">INPUT</text>
+    <text x="942" y="477" text-anchor="middle" class="node-title">Request</text>
+
+    <rect x="1030" y="398" width="152" height="114" rx="15" fill="#10233F"/>
+    <text x="1106" y="430" text-anchor="middle" class="small-cap" fill="#AFC2DD">ONE OWNER</text>
+    <text x="1106" y="459" text-anchor="middle" font-size="18" font-weight="760" fill="#FFFFFF">Thin</text>
+    <text x="1106" y="482" text-anchor="middle" font-size="18" font-weight="760" fill="#FFFFFF">coordinator</text>
+
+    <rect x="1212" y="388" width="192" height="134" rx="15" fill="#ECF8F6" stroke="#5BA99E" stroke-width="2"/>
+    <text x="1308" y="415" text-anchor="middle" class="small-cap" fill="#087F73">CAPABILITY MODULES</text>
+    <rect x="1230" y="432" width="46" height="54" rx="9" fill="#FFFFFF" stroke="#8FC2BA"/>
+    <rect x="1285" y="432" width="46" height="54" rx="9" fill="#FFFFFF" stroke="#8FC2BA"/>
+    <rect x="1340" y="432" width="46" height="54" rx="9" fill="#FFFFFF" stroke="#8FC2BA"/>
+    <text x="1253" y="466" text-anchor="middle" class="node-title">A</text>
+    <text x="1308" y="466" text-anchor="middle" class="node-title">B</text>
+    <text x="1363" y="466" text-anchor="middle" class="node-title">C</text>
+    <text x="1308" y="508" text-anchor="middle" class="node-sub">Explicit contracts · owned rules</text>
+
+    <rect x="1434" y="414" width="86" height="82" rx="13" fill="#087F73"/>
+    <text x="1477" y="447" text-anchor="middle" class="small-cap" fill="#D9F4EF">PROOF</text>
+    <text x="1477" y="471" text-anchor="middle" font-size="15" font-weight="760" fill="#FFFFFF">Observable</text>
+    <text x="1477" y="489" text-anchor="middle" font-size="15" font-weight="760" fill="#FFFFFF">result</text>
+
+    <!-- Honest state -->
+    <path d="M1106 512V567M1308 522V567" fill="none" stroke="#9AAABC" stroke-width="2" stroke-dasharray="5 6"/>
+    <rect x="930" y="567" width="545" height="90" rx="15" fill="#F7FAFC" stroke="#B8C4D2" stroke-width="1.5"/>
+    <text x="957" y="596" class="small-cap" fill="#526277">HONEST STATE</text>
+    <text x="957" y="626" class="node-title">Durable business facts</text>
+    <circle cx="1191" cy="620" r="3" fill="#8796A8"/>
+    <text x="1210" y="626" class="node-title">Minimum safe-recovery record</text>
+
+    <g>
+      <rect x="930" y="683" width="170" height="36" rx="18" fill="#E1F3F0"/>
+      <text x="1015" y="706" text-anchor="middle" class="small-cap" fill="#087F73">ONE CONTROL OWNER</text>
+      <rect x="1115" y="683" width="176" height="36" rx="18" fill="#E1F3F0"/>
+      <text x="1203" y="706" text-anchor="middle" class="small-cap" fill="#087F73">EXPLICIT CONTRACTS</text>
+      <rect x="1306" y="683" width="169" height="36" rx="18" fill="#E1F3F0"/>
+      <text x="1390" y="706" text-anchor="middle" class="small-cap" fill="#087F73">MINIMUM STATE</text>
+    </g>
+
+    <!-- Takeaway -->
+    <rect x="50" y="798" width="1500" height="66" rx="16" fill="#E9EEF4"/>
+    <circle cx="86" cy="831" r="10" fill="#087F73"/>
+    <text x="115" y="840" class="takeaway">Complexity should reflect the problem’s evidence—not the system’s history.</text>
+    <text x="1505" y="839" text-anchor="end" class="small-cap" fill="#526277">CLICK TO READ THE FULL REFERENCE</text>
+  </g>
+</svg>
