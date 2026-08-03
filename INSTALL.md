@@ -6,9 +6,11 @@ contract followed by Codex when a user pastes the install prompt from the README
 The recommended path is to give Codex this prompt:
 
 ```text
-Install Smallest Complete v0.1.0 from https://github.com/JetXu-LLM/smallest-complete/tree/v0.1.0.
-Read README.md and INSTALL.md at that release first, then follow INSTALL.md exactly. Verify the published SHA256SUMS before writing. Preserve all existing global Codex instructions, make no unrelated changes, show me the planned file-level changes, install the skill globally, add the required Smallest Complete activation block once, validate the installation, and report exactly what changed. If the existing installation conflicts with the published files, stop and show me the conflict instead of guessing.
+Install Smallest Complete from https://github.com/JetXu-LLM/smallest-complete.
+Follow INSTALL.md exactly.
 ```
+
+The prompt stays short on purpose. The procedure below is the safety contract.
 
 ## Agent installation procedure
 
@@ -16,8 +18,8 @@ When following the prompt above, perform only the procedure below.
 
 ### 1. Resolve source and target paths
 
-Use the `v0.1.0` checkout when it is already available. Otherwise, clone tag
-`v0.1.0` from `https://github.com/JetXu-LLM/smallest-complete` into a fresh
+Use the `v0.1.1` checkout when it is already available. Otherwise, clone tag
+`v0.1.1` from `https://github.com/JetXu-LLM/smallest-complete` into a fresh
 temporary directory. Do not install from a moving branch. Do not execute code
 from the repository; installation copies text files only.
 
@@ -136,11 +138,11 @@ change.
 
 ## Updating
 
-Use the install prompt from the release you want to install. Codex will compare
-that immutable release with the installed copy. If they differ, review the diff
-and explicitly approve replacement; the installer will back up the current copy
-first. The activation block is changed only when it differs from the published
-block and you approve that change.
+Use the current README prompt. Codex will read this contract, resolve the stable
+release declared in step 1, and compare it with the installed copy. If they
+differ, review the diff and explicitly approve replacement; the installer will
+back up the current copy first. The activation block is changed only when it
+differs from the published block and you approve that change.
 
 ## Uninstalling
 
