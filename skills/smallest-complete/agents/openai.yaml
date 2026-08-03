@@ -1,0 +1,4 @@
+interface:
+  display_name: "Smallest Complete"
+  short_description: "Deliver the smallest result that fully works"
+  default_prompt: "Use $smallest-complete to fully complete this task, investigate as needed, and keep deliverables, changes, and actions within scope."

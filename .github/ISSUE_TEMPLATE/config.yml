@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the evaluation guide
+    url: https://github.com/JetXu-LLM/smallest-complete/blob/main/docs/evaluation.md
+    about: Check what evidence supports a useful behavior report.
