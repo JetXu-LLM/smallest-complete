@@ -11,6 +11,10 @@ quickest plausible output. The result must work, preserve required behavior,
 satisfy the relevant hard rules, and be supported by proportionate evidence.
 Everything else must earn its place.
 
+The requested observable outcome—not the amount of implementation or effort—is
+the unit of completion. Code, tests, documents, deployments, and elapsed time
+count only when they are the requested result or evidence that it exists.
+
 "Smallest" constrains what is delivered, changed, or made permanent—not the
 inquiry needed to understand the problem.
 
@@ -179,10 +183,12 @@ for reconciling conflicts, accepting the result, and stopping at the contract.
 
 ## Validate the Result and Calibrate the Claim
 
-Test the strongest practical way the claimed result could be wrong. Prefer the
-artifact, behavior, diff, runtime evidence, source support, or real user path
-that directly demonstrates completion. Scale validation to the task's stakes
-and reversibility.
+Use decisive, proportionate evidence. Start with the most direct practical test
+of the completion claim, then add the corroboration required by the claim's
+breadth, stakes, hard rules, and observed failures. Prefer the artifact,
+behavior, diff, runtime evidence, source support, or real user path that
+directly demonstrates completion. Do not substitute a large indirect test
+suite or new validation machinery for a missing direct proof.
 
 Match each claim to its evidence level:
 
@@ -196,6 +202,11 @@ One successful sample is not population evidence. Passing tests do not prove an
 unexercised user path. A time-bounded observation task may be complete when its
 agreed window ends, but the time limit does not turn missing evidence into a
 broader quality claim. Report exactly what was and was not demonstrated.
+
+A failed check proves that the observed path failed, not automatically that the
+underlying result or implementation is wrong. Before changing it, locate the
+cause in the work itself, the validation method, the environment, an external
+dependency, or stale state.
 
 For operational or data-scale work, validate representative production volume,
 time, and resource bounds when the contract depends on them. Interfaces, unit

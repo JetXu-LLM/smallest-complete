@@ -50,6 +50,13 @@ exception, or extension must be implemented now. Keep an unknown explicit or
 test it with a reversible experiment instead of turning it into permanent
 structure.
 
+For a broad authorized implementation, first prove a narrow but representative
+end-to-end path through the real control path and the interface through which
+the result will actually be used. It must exercise the core capability and
+meaningful integration boundaries, not a toy, injected state, or bypass. Expand
+breadth along that proven path, and do not mistake the slice for completion of
+the full contract.
+
 ## Recognize the Failure Pattern
 
 Stop and reconsider when each uncertainty, exception, or future possibility
@@ -179,8 +186,8 @@ ongoing mental and operational burden, not merely the smaller initial diff.
 3. Propose the smallest end-to-end path using existing capabilities.
 4. Look for deletion, consolidation, and reuse before adding structure.
 5. Test each proposed addition with the question above.
-6. Implement or recommend the narrowest complete slice that can produce real
-   evidence.
+6. Implement or recommend a narrow, representative end-to-end slice that can
+   produce real evidence.
 7. Validate actual behavior, then add complexity only when new evidence
    requires it.
 
