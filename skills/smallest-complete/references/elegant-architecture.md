@@ -50,6 +50,11 @@ exception, or extension must be implemented now. Keep an unknown explicit or
 test it with a reversible experiment instead of turning it into permanent
 structure.
 
+Decide when the needed information exists. A later consumer's need for a firm
+answer does not mean the earliest stage can produce it reliably. Keep unknown
+meaning unknown until an owner has enough evidence to decide and a real consumer
+needs the contract or durable state.
+
 For a broad authorized implementation, first prove a narrow but representative
 end-to-end path through the real control path and the interface through which
 the result will actually be used. It must exercise the core capability and
@@ -119,6 +124,12 @@ Make each module:
 - clear about failures it cannot handle;
 - idempotent where retries could repeat an external effect.
 
+Give each durable fact and semantic judgment one final owner. Other modules may
+provide evidence, validate hard rules, reject invalid output, or request
+revision, but they must not silently reinterpret and rewrite the same judgment.
+If several writers are unavoidable, define their merge rule and who owns the
+merged result.
+
 Keep a module externally free of hidden workflow state. It may read or write
 the business data it owns; this does not mean it must be side-effect-free.
 Avoid making it depend on a global mode, a previous call's hidden memory, or a
@@ -144,6 +155,12 @@ not mirror that state elsewhere.
 For every stored field or state transition, identify the present failure,
 requirement, or hard rule that makes it necessary.
 
+A local failure, wait, or unknown should affect only the capability that owns
+it. Escalate it into a wider stop only when a shared safety rule, data-integrity
+boundary, or irreversible effect is at risk. If two facts have different
+consumers or blocking authority, store them separately instead of compressing
+them into one global status.
+
 ## Use Agents for the Adaptive Tail
 
 When an agent is available, let it handle ambiguous, context-dependent,
@@ -151,10 +168,16 @@ low-frequency, and reversible decisions. Examples include choosing among known
 tools, interpreting an unusual source response, making a temporary adaptation,
 or deciding whether to retry or escalate.
 
-Keep hard guarantees in deterministic code: permissions, validation, data
-integrity, idempotency, stable high-frequency rules, and irreversible external
-effects. Give the agent freedom inside those boundaries rather than encoding
-every possible situation in advance.
+Keep deterministic code for permissions, data integrity, mechanically checkable
+hard rules, idempotent protection against repeated effects, and irreversible
+actions. Do not make code guess an open semantic judgment, repair its meaning, and
+then publish the rewrite as if it were the original owner's decision. Give the
+agent freedom inside the hard boundaries rather than encoding every possible
+situation in advance.
+
+Idempotency prevents duplicate effects; it does not require independent
+intelligent runs to reach identical meaning. A repair added for weaker output
+must become a no-op on already-valid stronger output.
 
 If the agent decides what happens next, keep the code coordinator as a thin
 runner and safety boundary. Do not build a second smart router that duplicates
@@ -191,12 +214,21 @@ ongoing mental and operational burden, not merely the smaller initial diff.
 7. Validate actual behavior, then add complexity only when new evidence
    requires it.
 
+For scheduled, retried, batched, or long-running work, validate the first,
+second, and later run. Completed units should stay complete, unfinished work
+should continue, local failures should remain isolated, and repeated operation
+should converge instead of starve or recreate work.
+
 For an existing system, choose the intended single path and owner first.
 Delete, collapse, or bypass accidental layers before wrapping them in a new
 abstraction. Use a temporary bridge only when direct migration is materially
 unsafe or impractical, keep it local, and give it a concrete removal condition.
 Do not preserve old and new architectures indefinitely in the name of
 compatibility.
+
+At natural milestones in a long implementation, trace the actual end-to-end path
+again. Fold valid local changes into one current explanation and delete replaced
+structure and tests that protect only the old mechanism.
 
 Scale the analysis to the stakes and reversibility of the decision. Do not
 create architecture ceremony for a simple local choice.

@@ -18,8 +18,8 @@ When following the prompt above, perform only the procedure below.
 
 ### 1. Resolve source and target paths
 
-Use the `v0.1.3` checkout when it is already available. Otherwise, clone tag
-`v0.1.3` from `https://github.com/JetXu-LLM/smallest-complete` into a fresh
+Use the `v0.1.4` checkout when it is already available. Otherwise, clone tag
+`v0.1.4` from `https://github.com/JetXu-LLM/smallest-complete` into a fresh
 temporary directory. Do not install from a moving branch. Do not execute code
 from the repository; installation copies text files only.
 

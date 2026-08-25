@@ -2,9 +2,9 @@
 
 # Smallest Complete — Stop one task from becoming ten.
 
-A lightweight Skill for Codex and ChatGPT agents: finish exactly what was asked,
-prove it works, and stop before the side quests. For non-trivial coding and
-architecture work, it also applies an
+A lightweight Skill for Codex and ChatGPT agents: once a complex job is clear
+enough to act, finish exactly what was asked, prove it works, and stop before the
+side quests. For non-trivial coding and architecture work, it also applies an
 [`elegant-architecture`](skills/smallest-complete/references/elegant-architecture.md)
 lens—clear control, explicit ownership, and only the state the real job requires.
 
@@ -75,6 +75,7 @@ before planning or editing.
 | --- | --- |
 | **Smallest** | No adjacent deliverables, speculative systems, or permanent machinery. |
 | **Complete** | The requested result actually works and required behavior is preserved. |
+| **Coherent** | Long work keeps one current route; local fixes fit it or replace part of it. |
 | **Proven** | Completion claims match observable evidence. |
 | **Stop** | Useful discoveries do not silently become new work. |
 
@@ -83,7 +84,7 @@ before planning or editing.
 | You ask | Smallest Complete response |
 | --- | --- |
 | “Fix CSV export when descriptions contain commas.” | Fix escaping at the owning boundary, test it, stop. No export platform. |
-| “Refactor this ingestion workflow.” | Keep one clear control path, a thin coordinator, capability-owned rules, and only required state. No parallel architecture “just in case.” |
+| “Refactor this ingestion workflow.” | Exercise representative real input early, keep one control path and explicit owners, and remove superseded mechanisms. |
 | “Turn these notes into five slides.” | Research what the deck needs, deliver five strong slides, stop. No brand system. |
 
 For research, writing, analysis, and other ChatGPT Work tasks, inquiry stays as

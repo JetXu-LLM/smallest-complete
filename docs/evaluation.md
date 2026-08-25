@@ -18,6 +18,8 @@ At minimum, score both sides of the objective.
 - Did it preserve required prior behavior?
 - Did it satisfy the current hard constraints?
 - Did validation exercise the relevant user path?
+- Did representative real input reach the actual primary path early enough to
+  test the route?
 - Was the final claim no broader than the evidence?
 
 ### Scope discipline
@@ -27,6 +29,18 @@ At minimum, score both sides of the objective.
 - Did adjacent findings become implementations without authorization?
 - Was permanent state or coordination added without a present requirement?
 - Did work continue after the acceptance criteria passed?
+- Did accumulated local fixes create a second route, owner, or meaning?
+
+### Long-task coherence
+
+- After delegation, resume, or compaction, did one current explanation survive?
+- Did the agent reopen the problem when repairs crossed owners or the same real
+  result kept failing?
+- Did the integrating agent inspect the whole user-visible result instead of
+  accepting component reports collectively?
+- Did costly reruns distinguish causes or change a decision?
+- For scheduled or retried work, did second and later runs skip terminal work,
+  continue unfinished work, isolate local waits, and converge?
 
 ### Human cost
 
@@ -59,7 +73,8 @@ The test set should include:
 - document or presentation tasks where extra craft is useful but extra
   deliverables are not;
 - negative prompts that should not trigger a heavy workflow;
-- resumed or compacted tasks where stale plans could reappear.
+- resumed or compacted tasks where a good plan can drift through local repairs;
+- scheduled or retried tasks that pass once but starve or repeat work later.
 
 ## Activation evaluation
 

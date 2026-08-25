@@ -1,6 +1,6 @@
 ---
 name: smallest-complete
-description: "Complete complex agentic work within the user's actual authorization: define the smallest fully working outcome, keep inquiry broad enough to support it, resolve conflicting acceptance criteria, preserve required behavior, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for complex, ambiguous, multi-step, long-running, delegated, resumed, or implementation-heavy work across Codex and ChatGPT Work, including code changes, debugging, refactoring, architecture, research, analysis, documents, presentations, and operations. For non-trivial coding, debugging, refactoring, migration, system design, or architecture work, also read the bundled elegant-architecture reference. Do not use for simple questions, trivial transformations, or obviously local edits that cannot expand in scope."
+description: "Complete complex work once its objective, authorization, and problem are clear enough to act: define the smallest fully working outcome, preserve required behavior, maintain one coherent path, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for multi-step, long-running, delegated, resumed, design, implementation, debugging, refactoring, migration, document, presentation, or operational work whose main challenge is bounded execution and completion. If the central uncertainty is still the value function, problem boundary, causal or evidence model, owner, or governing principle, settle it before using this skill to converge. For non-trivial coding or architecture execution, also read the bundled elegant-architecture reference. Do not use for simple questions or trivial transformations."
 ---
 
 # Smallest Complete
@@ -17,6 +17,18 @@ count only when they are the requested result or evidence that it exists.
 
 "Smallest" constrains what is delivered, changed, or made permanent—not the
 inquiry needed to understand the problem.
+
+## Lead Only When the Problem Is Clear Enough
+
+Lead convergence, design, execution, validation, and closure only after the job
+is stable enough to act. Do not use this skill to decide what problem, value
+function, owner, or evidence model is correct.
+
+Start when the objective, dominant loss, authority, sources of truth, main route,
+strongest alternative, decisive unknowns, and authorized outcome are clear
+enough to act. If execution or accumulated repairs make those premises
+incoherent, stop converging and reopen the problem before resuming. Keep the
+user's authorization and deliverable boundary unchanged.
 
 ## Establish the Current Contract
 
@@ -43,7 +55,7 @@ useful neighboring capability.
 After context compaction, interruption, handoff, or resume, reconstruct the
 current contract from the conversation, durable task state, authoritative
 sources, and repository or artifact state before continuing. Do not revive a
-stale plan merely because it remains available.
+stale plan merely because it remains available. For a long task, keep and update a compact current explanation of the whole route.
 
 Do not create a formal specification for a simple task. State or track this
 contract only as much as the work needs. If a consequential ambiguity cannot be
@@ -94,10 +106,14 @@ result. Reuse capabilities already provided by the environment, repository,
 tools, platform, operator, or agent. Prefer a reversible experiment over a
 permanent mechanism when an unknown can be resolved cheaply.
 
-Keep one current task contract and one primary route to completion. Explore
-competing hypotheses within that contract when evidence warrants them. Revise
-the route when evidence invalidates it, but do not accumulate competing plans,
-compatibility paths, or recovery machinery merely because earlier ideas existed.
+Keep one current task contract, primary route, and explanation of the whole
+result. Each local change must fit that route or explicitly replace part of it;
+it must not create a second semantic or control path. Explore competing
+hypotheses when evidence warrants them, but do not preserve old plans or
+compatibility machinery merely because they existed.
+
+As soon as practical, send representative real input through the real path and
+inspect the output people will use. This tests the route, not the full contract.
 
 Every proposed addition to the deliverable, implementation, workflow, or set of
 actions must satisfy at least one of these conditions:
@@ -146,16 +162,23 @@ disguise a redesign as a necessary fix.
 
 ## Repair and Replace at the Owning Boundary
 
-Fix a defect in the narrowest component that owns the incorrect behavior. A
+Prefer a narrow repair only when evidence isolates the failure to one owner and
+the objective, primary route, and responsibility boundaries still hold. A
 downstream formatting, rendering, packaging, or presentation defect does not
-justify rerunning an already accepted upstream analysis, review, or generation
-step unless evidence shows that the upstream result is itself wrong.
+justify rerunning an accepted upstream step unless evidence shows that its
+result is wrong.
 
 Fix the smallest complete capability or evidenced failure family, not only the
 single observed specimen. Correct the owning invariant and test the narrowest
 adjacent variant needed to show that the cause is handled. Do not turn that
 repair into a generalized framework, feature flag, migration system, or metric
 unless one of the addition conditions requires it.
+
+Stop patching when the same real outcome keeps failing, repairs cross owners,
+support structure grows faster than value, or old and new mechanisms coexist.
+Find the earliest shared decision, restore one route and owner per judgment, and
+remove the superseded path. Delete only code, compatibility behavior, and tests
+that the new route supersedes; preserve outcome and hard-boundary tests.
 
 Before replacing or simplifying an existing path, identify its must-preserve
 observable behaviors from authoritative sources and representative outputs.
@@ -178,8 +201,11 @@ measured scale, or material risk justifies its ongoing cost.
 
 When delegating, give each subagent a bounded outcome, relevant sources, scope,
 acceptance evidence, and stop condition. Ask for findings or a candidate result,
-not authority to enlarge the mission. The integrating agent remains responsible
-for reconciling conflicts, accepting the result, and stopping at the contract.
+not authority to enlarge the mission. The integrating agent owns assembly,
+whole-result acceptance, and stopping—not semantic judgments inside results.
+Keep one final owner per judgment; component reports cannot replace the whole-result check.
+When stakes justify it, delegate an independent challenge;
+final acceptance remains with the root.
 
 ## Validate the Result and Calibrate the Claim
 
@@ -204,9 +230,12 @@ agreed window ends, but the time limit does not turn missing evidence into a
 broader quality claim. Report exactly what was and was not demonstrated.
 
 A failed check proves that the observed path failed, not automatically that the
-underlying result or implementation is wrong. Before changing it, locate the
-cause in the work itself, the validation method, the environment, an external
-dependency, or stale state.
+underlying result or implementation is wrong. Before changing course, distinguish
+the result itself, its implementation, the validation method, the environment,
+an external dependency, and stale state. One failure does not by itself justify
+rollback, a declaration of completion, or redesign.
+
+Before an expensive rerun, state what it distinguishes and how either result changes a decision. Otherwise do not rerun.
 
 For operational or data-scale work, validate representative production volume,
 time, and resource bounds when the contract depends on them. Interfaces, unit
@@ -220,9 +249,9 @@ Do not mistake any of the following for completion:
 - supporting infrastructure built before the primary deliverable;
 - a summary of work that has not produced the promised artifact or behavior.
 
-If validation fails, fix the narrowest owning cause and test again. Reopen the
-design only when evidence shows that the current path is structurally incapable
-of meeting the contract.
+If validation fails and evidence isolates one owning cause while the route still
+holds, repair it and test again. Reopen the design when the objective, route,
+ownership, or validation logic no longer remains coherent as a whole.
 
 ## Stop When Complete
 
@@ -247,17 +276,7 @@ Remove it. Then deliver the result and stop.
 
 ## Recognize Scope-Expansion Failure
 
-Reconsider immediately when the requested deliverable is still unfinished but
-the work has started producing synchronization systems, recovery frameworks,
-version histories, compatibility layers, elaborate state machines, generalized
-platforms, or tests for disasters the real workflow has never encountered.
-
-This failure feels diligent because each addition addresses a conceivable risk.
-In combination, the additions consume most of the work, multiply interactions,
-obscure ownership, and make each later fix preserve more accidental behavior.
-The primary result arrives late or never, while the system can grow to thousands
-or tens of thousands of lines that remain difficult to finish or change.
-
-Do not repair this pattern by adding another coordinating layer or governance
-mechanism. Return to the current contract, choose one path to its observable
-end, keep only demonstrated necessities, validate the result, and stop.
+Reconsider when the result is unfinished while coordination, recovery,
+compatibility, state, infrastructure, or speculative tests keep growing. Do not
+add another coordinator. Return to one path, remove what evidence does not
+require, validate the observable result, and stop.
