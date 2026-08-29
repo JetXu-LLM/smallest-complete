@@ -7,7 +7,8 @@ enough to act, finish exactly what was asked, prove it works, and stop before th
 side quests. For non-trivial coding and architecture work, it also applies an
 [`elegant-architecture`](skills/smallest-complete/references/elegant-architecture.md)
 lens—clear control, explicit ownership, stable handoffs, and only the state the
-real job requires.
+real job requires. It works backward from the receiver's next action, then
+delivers one value path within the minimum hard boundaries that must hold now.
 
 <p>
   <img alt="Installer: Codex" src="https://img.shields.io/badge/installer-Codex-0F64B5?style=flat-square">
@@ -48,7 +49,7 @@ the evidence requires.
 | --- | --- | --- |
 | **Applies to** | Complex Codex and ChatGPT Work tasks | Non-trivial coding, debugging, refactoring, migration, system design, or architecture work |
 | **Question** | Is this inside what was actually authorized? | Is this the clearest structure the evidence requires? |
-| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, shared workflow state, brittle handoffs, and tangled coordination |
+| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, brittle handoffs, speculative defenses, and tangled coordination |
 | **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference |
 
 First it keeps the result inside the ask. Then, when the task genuinely requires
@@ -75,7 +76,7 @@ before planning or editing.
 | Principle | Meaning |
 | --- | --- |
 | **Smallest** | No adjacent deliverables, speculative systems, or permanent machinery. |
-| **Complete** | The requested result actually works and required behavior is preserved. |
+| **Complete** | The requested result actually works for its next receiver and required behavior is preserved. |
 | **Coherent** | Long work keeps one route; local fixes fit it or replace part of it, and declared handoffs stay stable. |
 | **Proven** | Completion claims match observable evidence. |
 | **Stop** | Useful discoveries do not silently become new work. |
@@ -85,7 +86,7 @@ before planning or editing.
 | You ask | Smallest Complete response |
 | --- | --- |
 | “Fix CSV export when descriptions contain commas.” | Fix escaping at the owning boundary, test it, stop. No export platform. |
-| “Refactor this ingestion workflow.” | Exercise representative real input through its public boundary, keep one control path, and remove superseded mechanisms. |
+| “Refactor this ingestion workflow.” | Exercise representative real input through the receiver's next action, keep one control path, and add hardening only when a current boundary or evidence requires it. |
 | “Turn these notes into five slides.” | Research what the deck needs, deliver five strong slides, stop. No brand system. |
 
 For research, writing, analysis, and other ChatGPT Work tasks, inquiry stays as

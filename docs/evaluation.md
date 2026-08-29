@@ -21,7 +21,8 @@ At minimum, score both sides of the objective.
 - Did representative real input reach the actual primary path early enough to
   test the route?
 - If the result declared a handoff or public capability, could its intended
-  receiver use the public contract without internal knowledge?
+  receiver take the next action using only the public result, contract, and
+  context that receiver is allowed to have?
 - Did each current public contract still have a current producer?
 - Was the final claim no broader than the evidence?
 
@@ -46,6 +47,8 @@ At minimum, score both sides of the objective.
   continue unfinished work, isolate local waits, and converge?
 - When a provider, store, or internal workflow changed, did the declared public
   contract remain usable without receiver changes?
+- Did producer-side evidence improve while receiver action or user value stayed
+  flat? If so, did the agent reopen the route instead of adding support layers?
 
 ### Human cost
 
@@ -70,6 +73,12 @@ For a meaningful comparison:
 5. Score outputs blind when practical.
 6. Repeat tasks; one dramatic example is not aggregate evidence.
 
+For a declared handoff, include a clean-receiver probe. Give the receiver only
+the public result, contract, its real task, and information available at that
+boundary. Do not expose producer reasoning or internal state. Score whether the
+receiver can act, what clarification or repair it needs, and whether the
+producer transferred interpretation or recovery work across the boundary.
+
 The test set should include:
 
 - local software fixes where a broader redesign is tempting;
@@ -81,7 +90,18 @@ The test set should include:
 - resumed or compacted tasks where a good plan can drift through local repairs;
 - handoff tasks where producer artifacts can be mistaken for public contracts;
 - provider or storage changes that should remain invisible to current consumers;
+- active-task messages where the observer must refresh current state and either
+  stay silent or send one decision-changing delta;
+- value-path tasks where permissions, privacy, integrity, and irreversible
+  effects must hold from the first slice, while speculative recovery,
+  compatibility, or governance should not precede useful capability;
 - scheduled or retried tasks that pass once but starve or repeat work later.
+
+Include negative controls in which a hard boundary must precede value delivery,
+an observed repeated side effect requires idempotency, a current consumer needs
+a compatibility adapter, a helper has no public consumer, or receiver goals
+conflict. These distinguish receiver discipline from schema ceremony,
+speculative empathy, and indiscriminate removal of safeguards.
 
 ## Activation evaluation
 

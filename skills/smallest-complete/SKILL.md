@@ -111,9 +111,8 @@ it must not create a second semantic or control path. Explore competing
 hypotheses when evidence warrants them, but do not preserve old plans or
 compatibility machinery merely because they existed.
 
-As soon as practical, send representative real input through the real path and inspect the result through the public boundary its intended reader or system will use.
-This tests the route, not the full contract. If the current result promises a published output, handoff, or reusable capability, its smallest documented, consumer-stable contract is
-part of completion even before receiver code exists. Define only the business meaning and access that the current capability can reliably own, not future receiver logic.
+As soon as practical within the current hard boundaries, send representative real input through the real path and inspect the result through the public boundary that its intended reader or system will use. The path does not end when the producer emits an output: using only the public result, contract, and allowed context, the receiver must be able to take its next required action without reconstructing internals, repairing meaning, or asking the producer to finish the handoff.
+This tests the route, not the full contract. If the current result promises a published output, handoff, or reusable capability, its smallest documented, consumer-stable contract is part of completion even before receiver code exists. Define only the business meaning and access that the current capability can reliably own, not future receiver logic.
 
 Every proposed addition to the deliverable, implementation, workflow, or set of
 actions must satisfy at least one of these conditions:
@@ -175,7 +174,7 @@ repair into a generalized framework, feature flag, migration system, or metric
 unless one of the addition conditions requires it.
 
 Stop patching when the same real outcome keeps failing, repairs cross owners,
-support structure grows faster than value, or old and new mechanisms coexist.
+support structure grows faster than receiver action or user value, or old and new mechanisms coexist.
 Find the earliest shared decision, restore one route and owner per judgment, and
 remove the superseded path. Delete only code, compatibility behavior, and tests
 that the new route supersedes; preserve outcome and hard-boundary tests.
@@ -213,8 +212,7 @@ behavior, diff, runtime evidence, source support, or real user path that
 directly demonstrates completion. Do not substitute a large indirect test
 suite or new validation machinery for a missing direct proof.
 
-For a declared handoff or public capability, validate from the receiver side. A schema or artifact is insufficient when the receiver must bypass the public
-boundary, the current contract has no producer, or an internal source, store, or workflow change forces the receiver to change.
+For a declared handoff or public capability, validate from the receiver side using only the public result, contract, and allowed context. A schema, artifact, readback, or producer test is insufficient when the receiver cannot complete its next action, must bypass the public boundary, has no current producer, or must change with an internal source, store, or workflow.
 
 Match each claim to its evidence level:
 

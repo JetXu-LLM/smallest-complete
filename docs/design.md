@@ -33,7 +33,7 @@ It does not duplicate the Skill body. Global context stays small.
 - make additions earn their place;
 - repair at an isolated owning boundary or reintegrate when local fixes no longer
   form one system;
-- exercise representative real input through the intended public boundary early;
+- exercise representative real input through the intended receiver action early;
 - validate the observable result;
 - retain root whole-result acceptance without reassigning semantic ownership;
 - calibrate claims to evidence;
@@ -53,14 +53,18 @@ Its defaults are:
 
 - one clear control owner per end-to-end workflow;
 - independently callable capability modules with explicit ownership;
-- consumer-stable public contracts with current producers;
+- consumer-informed, domain-owned public contracts with current producers and
+  real user outcomes as acceptance;
 - decisions made only when their owner has enough information;
 - one final owner for each semantic judgment;
 - a small coordinator rather than several overlapping routers;
 - durable business facts and only the recovery state a real requirement needs;
 - local state that affects only its authorized scope;
 - agent judgment for ambiguous, reversible cases;
-- deterministic protection for hard rules and irreversible effects;
+- a useful value path inside minimum permission, privacy, integrity, legal, and
+  irreversible-effect boundaries;
+- further operational hardening only for a current contract, consumer,
+  evidenced loss, or observed failure;
 - repeated-run behavior that skips completed work and converges.
 
 These defaults are not a universal topology. Distributed coordination and
@@ -98,6 +102,14 @@ without changing its purpose, audience, format, or external action surface.
 
 This is a judgment rule, not a policy engine. The Skill leaves room for capable
 reasoning while giving that reasoning a stable boundary.
+
+For a declared handoff, the public contract is also an information boundary.
+Design it backward from the receiver's job, visible facts, and next action.
+Consumers inform the business meaning, the domain capability owns it, and the
+user's real outcome validates it. A clean receiver should be able to act without
+producer internals, semantic repair, or a private explanation. This does not
+justify one universal schema: different business facts may have different
+contracts, and internal helpers need none.
 
 ## Why there is no runtime
 

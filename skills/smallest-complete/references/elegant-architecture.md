@@ -44,10 +44,16 @@ Before choosing components, establish:
   agents;
 - the important unknowns.
 
-Solve the primary path before building supporting machinery around it. Treat a
-future specification as useful input, not proof that every possible mode,
-exception, or extension must be implemented now. Keep an unknown explicit or
-test it with a reversible experiment instead of turning it into permanent
+Build the value path and minimum hard boundary together. The first slice
+protects permissions, privacy, data integrity, binding safety or legal rules,
+and irreversible effects. Add retry, recovery, compatibility, governance,
+audit, and other hardening only for a current contract, consumer, evidenced
+loss, or observed failure. Value-first permits no disposable prototype, bypass,
+or deferred integrity.
+
+Treat a future specification as useful input, not proof that every possible
+mode, exception, or extension must be implemented now. Keep an unknown explicit
+or test it with a reversible experiment instead of turning it into permanent
 structure.
 
 Decide when the needed information exists. A later consumer's need for a firm
@@ -127,11 +133,15 @@ Make each module:
 - clear about failures it cannot handle;
 - idempotent where retries could repeat an external effect.
 
-For a capability another module will consume, or that the current work declares
-as a handoff, design from the receiving boundary backward. Expose a documented public contract for stable business meaning and the access needed for the declared
-use, without prescribing one downstream workflow. Keep sources and providers, input transports, storage layouts,
-models and prompts, internal workflows, staging artifacts, coordinator state, and raw payloads behind the boundary. Provenance may cross it, but must not determine
-the business shape. Consumers should not query internal tables or paths to reconstruct the promised result.
+For a consumed capability or declared handoff, treat the public boundary as an
+information boundary and design backward from the receiver's job, visible
+information, and next action. Consumers inform meaning, the domain capability
+owns the contract, and user outcomes validate value. Expose stable, documented
+meaning and access to act without prescribing downstream workflow. Keep sources,
+providers, transports, storage, models, prompts,
+workflows, staging artifacts, coordinator state, and raw payloads behind the
+boundary. Provenance may cross it, but must not shape business fields.
+Consumers should not query internals, need producer explanation, or repair meaning.
 
 Every current public contract needs a current producer and lifecycle owner. Historical data or a working reader does not make a capability current when nothing
 is responsible for producing it.
@@ -206,10 +216,14 @@ layer, or coordination path, ask:
 
 > What required behavior or hard rule would fail today if this were omitted?
 
+For a safeguard, name the current loss, protected actor, and burden. Applicable
+permission, privacy, integrity, legal, safety, and irreversible-effect protections
+belong in the first slice; other hardening needs a current rule, consumer,
+evidenced loss, or observed failure.
+
 Accept reasons grounded in the domain, observed repetition, measured scale, or
 material risk. Do not accept "production-grade," "complete," "clean,"
-"enterprise," "robust," or "we may need it later" as sufficient reasons by
-themselves.
+"enterprise," "robust," or "we may need it later" as sufficient reasons by themselves.
 
 Consider what the addition removes or makes simpler, whether an existing
 module, platform feature, operator, or agent can handle the need safely, and
@@ -219,14 +233,15 @@ ongoing mental and operational burden, not merely the smaller initial diff.
 ## Design or Simplify the System
 
 1. Trace the required job from sources and explicit inputs, through any public
-   contract, to observable completion at the receiving actor.
+   contract, to a next action the receiving actor can complete using only that
+   boundary.
 2. Identify one control owner for that workflow and one owner for each durable
    fact and business decision.
 3. Propose the smallest end-to-end path using existing capabilities.
 4. Look for deletion, consolidation, and reuse before adding structure.
 5. Test each proposed addition with the question above.
-6. Implement or recommend a narrow, representative end-to-end slice that can
-   produce real evidence.
+6. Implement or recommend a narrow, representative end-to-end slice inside the
+   minimum hard boundary that can produce real value evidence.
 7. Validate actual behavior, then add complexity only when new evidence
    requires it.
 
@@ -243,9 +258,12 @@ Do not preserve old and new architectures indefinitely in the name of
 compatibility; retain only an adapter still required by a current consumer.
 
 At natural milestones in a long implementation, trace the actual path again
-from source or input through the public contract to the receiver. Choose one credible internal change and ask whether it would force the receiver to change; if so,
-the boundary is leaking. Check for bypasses, public readers without producers, and several competing outputs. Fold valid local changes into one current explanation
-and delete replaced structure and tests that protect only the old mechanism.
+from source or input through the public contract to the receiver. Give a clean
+receiver only that result, contract, allowed context, and task; needing producer
+context makes the path incomplete. Ask whether one credible internal change
+would force receiver changes; if so, the boundary leaks. Check for bypasses, public readers
+without producers, and competing outputs. Fold valid changes into one current
+explanation and delete structure and tests that protect only the old mechanism.
 
 Scale the analysis to the stakes and reversibility of the decision. Do not
 create architecture ceremony for a simple local choice.
