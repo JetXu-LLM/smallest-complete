@@ -33,7 +33,7 @@ It does not duplicate the Skill body. Global context stays small.
 - make additions earn their place;
 - repair at an isolated owning boundary or reintegrate when local fixes no longer
   form one system;
-- exercise representative real input through the real path early;
+- exercise representative real input through the intended public boundary early;
 - validate the observable result;
 - retain root whole-result acceptance without reassigning semantic ownership;
 - calibrate claims to evidence;
@@ -53,6 +53,7 @@ Its defaults are:
 
 - one clear control owner per end-to-end workflow;
 - independently callable capability modules with explicit ownership;
+- consumer-stable public contracts with current producers;
 - decisions made only when their owner has enough information;
 - one final owner for each semantic judgment;
 - a small coordinator rather than several overlapping routers;

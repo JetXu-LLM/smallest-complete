@@ -20,6 +20,9 @@ At minimum, score both sides of the objective.
 - Did validation exercise the relevant user path?
 - Did representative real input reach the actual primary path early enough to
   test the route?
+- If the result declared a handoff or public capability, could its intended
+  receiver use the public contract without internal knowledge?
+- Did each current public contract still have a current producer?
 - Was the final claim no broader than the evidence?
 
 ### Scope discipline
@@ -41,6 +44,8 @@ At minimum, score both sides of the objective.
 - Did costly reruns distinguish causes or change a decision?
 - For scheduled or retried work, did second and later runs skip terminal work,
   continue unfinished work, isolate local waits, and converge?
+- When a provider, store, or internal workflow changed, did the declared public
+  contract remain usable without receiver changes?
 
 ### Human cost
 
@@ -74,6 +79,8 @@ The test set should include:
   deliverables are not;
 - negative prompts that should not trigger a heavy workflow;
 - resumed or compacted tasks where a good plan can drift through local repairs;
+- handoff tasks where producer artifacts can be mistaken for public contracts;
+- provider or storage changes that should remain invisible to current consumers;
 - scheduled or retried tasks that pass once but starve or repeat work later.
 
 ## Activation evaluation

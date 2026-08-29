@@ -6,7 +6,8 @@ A lightweight Skill for Codex and ChatGPT agents: once a complex job is clear
 enough to act, finish exactly what was asked, prove it works, and stop before the
 side quests. For non-trivial coding and architecture work, it also applies an
 [`elegant-architecture`](skills/smallest-complete/references/elegant-architecture.md)
-lens—clear control, explicit ownership, and only the state the real job requires.
+lens—clear control, explicit ownership, stable handoffs, and only the state the
+real job requires.
 
 <p>
   <img alt="Installer: Codex" src="https://img.shields.io/badge/installer-Codex-0F64B5?style=flat-square">
@@ -47,7 +48,7 @@ the evidence requires.
 | --- | --- | --- |
 | **Applies to** | Complex Codex and ChatGPT Work tasks | Non-trivial coding, debugging, refactoring, migration, system design, or architecture work |
 | **Question** | Is this inside what was actually authorized? | Is this the clearest structure the evidence requires? |
-| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, shared workflow state, and tangled coordination |
+| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, shared workflow state, brittle handoffs, and tangled coordination |
 | **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference |
 
 First it keeps the result inside the ask. Then, when the task genuinely requires
@@ -75,7 +76,7 @@ before planning or editing.
 | --- | --- |
 | **Smallest** | No adjacent deliverables, speculative systems, or permanent machinery. |
 | **Complete** | The requested result actually works and required behavior is preserved. |
-| **Coherent** | Long work keeps one current route; local fixes fit it or replace part of it. |
+| **Coherent** | Long work keeps one route; local fixes fit it or replace part of it, and declared handoffs stay stable. |
 | **Proven** | Completion claims match observable evidence. |
 | **Stop** | Useful discoveries do not silently become new work. |
 
@@ -84,7 +85,7 @@ before planning or editing.
 | You ask | Smallest Complete response |
 | --- | --- |
 | “Fix CSV export when descriptions contain commas.” | Fix escaping at the owning boundary, test it, stop. No export platform. |
-| “Refactor this ingestion workflow.” | Exercise representative real input early, keep one control path and explicit owners, and remove superseded mechanisms. |
+| “Refactor this ingestion workflow.” | Exercise representative real input through its public boundary, keep one control path, and remove superseded mechanisms. |
 | “Turn these notes into five slides.” | Research what the deck needs, deliver five strong slides, stop. No brand system. |
 
 For research, writing, analysis, and other ChatGPT Work tasks, inquiry stays as

@@ -52,8 +52,10 @@ structure.
 
 Decide when the needed information exists. A later consumer's need for a firm
 answer does not mean the earliest stage can produce it reliably. Keep unknown
-meaning unknown until an owner has enough evidence to decide and a real consumer
-needs the contract or durable state.
+meaning unknown until an owner has enough evidence to decide. A current promise
+to publish an output, handoff, or reusable capability creates a present boundary
+even when receiver code does not exist yet. Define only the stable meaning and access that the current owner can reliably supply; do not make an early stage
+settle an unknowable judgment or build future receiver logic.
 
 For a broad authorized implementation, first prove a narrow but representative
 end-to-end path through the real control path and the interface through which
@@ -115,7 +117,8 @@ future variant.
 
 Make each module:
 
-- complete one meaningful piece of work through a small, explicit contract;
+- complete one meaningful piece of work through a small, explicit contract
+  owned by that capability;
 - own the business rules and data that belong to that capability;
 - accept explicit inputs and return explicit results;
 - callable, understandable, testable, and replaceable without knowledge of
@@ -123,6 +126,15 @@ Make each module:
 - robust against normal variation inside its own boundary;
 - clear about failures it cannot handle;
 - idempotent where retries could repeat an external effect.
+
+For a capability another module will consume, or that the current work declares
+as a handoff, design from the receiving boundary backward. Expose a documented public contract for stable business meaning and the access needed for the declared
+use, without prescribing one downstream workflow. Keep sources and providers, input transports, storage layouts,
+models and prompts, internal workflows, staging artifacts, coordinator state, and raw payloads behind the boundary. Provenance may cross it, but must not determine
+the business shape. Consumers should not query internal tables or paths to reconstruct the promised result.
+
+Every current public contract needs a current producer and lifecycle owner. Historical data or a working reader does not make a capability current when nothing
+is responsible for producing it.
 
 Give each durable fact and semantic judgment one final owner. Other modules may
 provide evidence, validate hard rules, reject invalid output, or request
@@ -138,7 +150,10 @@ copy of the coordinator's state.
 Choose the number of modules by the quality of their boundaries, not by a
 target count. Do not create forty modules merely because there are forty data
 sources, and do not force unrelated sources into four modules merely to reduce
-the file count.
+the file count. Stable does not mean universal or immutable: semantically
+different capabilities may have different contracts, and internal helpers do
+not need public versioned schemas. Add compatible fields when that preserves meaning; when business meaning changes, version and migrate deliberately. Keep a
+compatibility adapter only while a current consumer still requires it.
 
 ## Keep State Honest
 
@@ -203,7 +218,8 @@ ongoing mental and operational burden, not merely the smaller initial diff.
 
 ## Design or Simplify the System
 
-1. Trace the required job from input to observable completion.
+1. Trace the required job from sources and explicit inputs, through any public
+   contract, to observable completion at the receiving actor.
 2. Identify one control owner for that workflow and one owner for each durable
    fact and business decision.
 3. Propose the smallest end-to-end path using existing capabilities.
@@ -224,11 +240,12 @@ Delete, collapse, or bypass accidental layers before wrapping them in a new
 abstraction. Use a temporary bridge only when direct migration is materially
 unsafe or impractical, keep it local, and give it a concrete removal condition.
 Do not preserve old and new architectures indefinitely in the name of
-compatibility.
+compatibility; retain only an adapter still required by a current consumer.
 
-At natural milestones in a long implementation, trace the actual end-to-end path
-again. Fold valid local changes into one current explanation and delete replaced
-structure and tests that protect only the old mechanism.
+At natural milestones in a long implementation, trace the actual path again
+from source or input through the public contract to the receiver. Choose one credible internal change and ask whether it would force the receiver to change; if so,
+the boundary is leaking. Check for bypasses, public readers without producers, and several competing outputs. Fold valid local changes into one current explanation
+and delete replaced structure and tests that protect only the old mechanism.
 
 Scale the analysis to the stakes and reversibility of the decision. Do not
 create architecture ceremony for a simple local choice.
@@ -239,7 +256,7 @@ Use ordinary language. Make clear:
 
 - the job and hard rules;
 - the control path and its decision owner;
-- the capability modules and what each owns;
+- the capability modules, public contracts, and what each owns;
 - the business and execution state that must persist;
 - what the agent may decide and what code must guarantee;
 - what was deliberately left out;

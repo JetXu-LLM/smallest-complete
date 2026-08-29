@@ -55,7 +55,7 @@ useful neighboring capability.
 After context compaction, interruption, handoff, or resume, reconstruct the
 current contract from the conversation, durable task state, authoritative
 sources, and repository or artifact state before continuing. Do not revive a
-stale plan merely because it remains available. For a long task, keep and update a compact current explanation of the whole route.
+stale plan merely because it remains available. For a long task, keep a compact current explanation of the whole route, its owners, and any public handoff or capability boundary.
 
 Do not create a formal specification for a simple task. State or track this
 contract only as much as the work needs. If a consequential ambiguity cannot be
@@ -82,10 +82,9 @@ migration, or debugging that may change structure, ownership, control flow,
 state, interfaces, or operational behavior, read
 [`references/elegant-architecture.md`](references/elegant-architecture.md)
 before planning or editing. Use it as the default software-design lens: prefer
-one clear end-to-end control path, independently callable capability modules
-with explicit owners, a simple coordinator, and only the state required by
-business facts or safe recovery. Let agents handle ambiguous and reversible
-cases while deterministic code protects hard rules and irreversible effects.
+one clear end-to-end control path, independently callable capability modules with explicit owners and consumer-stable public contracts, a simple coordinator,
+and only the state required by business facts or safe recovery. Let agents handle ambiguous and reversible cases while deterministic code protects hard rules
+and irreversible effects.
 
 For a truly local code edit that cannot alter those concerns, reading the
 reference is optional. Still apply its removal question before accepting any
@@ -112,8 +111,9 @@ it must not create a second semantic or control path. Explore competing
 hypotheses when evidence warrants them, but do not preserve old plans or
 compatibility machinery merely because they existed.
 
-As soon as practical, send representative real input through the real path and
-inspect the output people will use. This tests the route, not the full contract.
+As soon as practical, send representative real input through the real path and inspect the result through the public boundary its intended reader or system will use.
+This tests the route, not the full contract. If the current result promises a published output, handoff, or reusable capability, its smallest documented, consumer-stable contract is
+part of completion even before receiver code exists. Define only the business meaning and access that the current capability can reliably own, not future receiver logic.
 
 Every proposed addition to the deliverable, implementation, workflow, or set of
 actions must satisfy at least one of these conditions:
@@ -180,13 +180,10 @@ Find the earliest shared decision, restore one route and owner per judgment, and
 remove the superseded path. Delete only code, compatibility behavior, and tests
 that the new route supersedes; preserve outcome and hard-boundary tests.
 
-Before replacing or simplifying an existing path, identify its must-preserve
-observable behaviors from authoritative sources and representative outputs.
-Preserve required behavior, not accidental topology. Do not keep old internal
-layers merely to resemble the previous design, and do not drop required
-behavior merely because a cleaner implementation is available. When exact
-wording, templates, or legacy behavior materially affect the result, inspect
-those primary sources directly; a summary is not a substitute.
+Before replacing or simplifying an existing path, use authoritative sources and representative outputs to identify the observable behaviors and public contracts
+it must preserve. Preserve required consumer meaning and access, not a provider, store, internal workflow, or accidental topology. Do not drop required
+behavior or compatibility merely because a cleaner implementation is available. When exact wording, templates, or legacy behavior materially affect the result,
+inspect those primary sources directly; a summary is not a substitute.
 
 ## Use Agent Judgment and Bound Delegation
 
@@ -215,6 +212,9 @@ breadth, stakes, hard rules, and observed failures. Prefer the artifact,
 behavior, diff, runtime evidence, source support, or real user path that
 directly demonstrates completion. Do not substitute a large indirect test
 suite or new validation machinery for a missing direct proof.
+
+For a declared handoff or public capability, validate from the receiver side. A schema or artifact is insufficient when the receiver must bypass the public
+boundary, the current contract has no producer, or an internal source, store, or workflow change forces the receiver to change.
 
 Match each claim to its evidence level:
 
