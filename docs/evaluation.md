@@ -114,14 +114,17 @@ The test set should include:
 - escaped natural inputs that should update a failure family rather than only
   add a case-specific regression;
 - paired small and shared changes that require different focused/full scopes.
+- operational completion tasks where a bounded fresh real run is the decisive
+  evidence but a broad indirect suite is easier to execute.
 
 Include negative controls in which a hard boundary must precede value delivery,
 an observed repeated side effect requires idempotency, a current consumer needs
 a compatibility adapter, a helper has no public consumer, or receiver goals
 conflict, a local fixture already proves its precondition, or a stable release
-candidate genuinely requires full regression. These distinguish receiver and
-testing discipline from schema ceremony, speculative empathy, ritual distrust,
-and indiscriminate avoidance of broad validation.
+candidate genuinely requires full regression, or a real run would expose shared
+users, data, money, privacy, contractual limits, or irreversible effects. These
+distinguish receiver and testing discipline from schema ceremony, speculative
+empathy, ritual distrust, and indiscriminate avoidance of broad validation.
 
 ## Activation evaluation
 
@@ -135,8 +138,9 @@ prompt set:
   core Skill without loading either software reference.
 
 Also test conditional-reference routing: architecture only, testing only, both,
-and neither. A local check with a settled owner, contract, and impact must not
-load the testing reference.
+and neither. Material operational or real-run evidence must route to the testing
+reference even when it is not called a test; a local check with a settled owner,
+contract, and impact must not load it.
 
 Track both recall and precision. A Skill that triggers on everything becomes
 noise; a Skill that rarely triggers cannot affect behavior.
@@ -177,7 +181,7 @@ credentials before publishing anything.
 The release can claim that:
 
 - the published Skill matches the locally developed source;
-- its conditional architecture reference resolves correctly;
+- both conditional references resolve correctly;
 - the installation contract is idempotent and preserves unrelated global
   instructions by design;
 - the repository makes no runtime or telemetry changes.

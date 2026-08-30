@@ -11,7 +11,7 @@ global AGENTS.md activation
 skills/smallest-complete/SKILL.md
         ├─ only for non-trivial coding or architecture work
         │  references/elegant-architecture.md
-        └─ only when test design or validation is material
+        └─ only when the choice of tests or other validation evidence is material
            references/evidence-calibrated-testing.md
 ```
 
@@ -76,9 +76,9 @@ material risk require them.
 ### Conditional testing reference: calibrate evidence without testing every task
 
 [`evidence-calibrated-testing.md`](../skills/smallest-complete/references/evidence-calibrated-testing.md)
-loads only when test design or validation materially affects completion: an
-escaped failure, a receiver or operational claim, or a consequential choice
-among focused, broad, and full evidence.
+loads only when the choice of tests or other completion evidence materially
+affects acceptance: an escaped failure, a receiver, operational, or real-run
+claim, or a consequential choice among focused, broad, and full evidence.
 
 It derives important failure scenarios from real losses, receiver work,
 operational exposure, semantic impact, and escaped incidents. It then chooses an

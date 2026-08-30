@@ -1,6 +1,6 @@
 ---
 name: smallest-complete
-description: "Complete complex work once its objective, authorization, and problem are clear enough to act: define the smallest fully working outcome, preserve required behavior, maintain one coherent path, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for multi-step, long-running, delegated, resumed, design, implementation, debugging, refactoring, migration, document, presentation, or operational work whose main challenge is bounded execution and completion. If the central uncertainty is still the value function, problem boundary, causal or evidence model, owner, or governing principle, settle it before using this skill to converge. For non-trivial coding or architecture execution, read the bundled elegant-architecture reference; when test design or validation materially affects completion, read evidence-calibrated-testing. Do not use for simple questions or trivial transformations."
+description: "Complete complex work once its objective, authorization, and problem are clear enough to act: define the smallest fully working outcome, preserve required behavior, maintain one coherent path, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for multi-step, long-running, delegated, resumed, design, implementation, debugging, refactoring, migration, document, presentation, or operational work whose main challenge is bounded execution and completion. If the central uncertainty is still the value function, problem boundary, causal or evidence model, owner, or governing principle, settle it before using this skill to converge. For non-trivial coding or architecture execution, read the bundled elegant-architecture reference; when the choice of tests or other validation evidence materially affects completion, read evidence-calibrated-testing. Do not use for simple questions or trivial transformations."
 ---
 
 # Smallest Complete
@@ -73,7 +73,10 @@ Do not let a lower-level gate silently redefine the stated job. If two current
 binding requirements materially conflict, expose the conflict and resolve it
 before implementation, costly validation, or irreversible action. Do not pick
 one implicitly or invent a deterministic guard, workflow, or subsystem to make
-the contradiction appear solved.
+the contradiction appear solved. Apply stop, retry, exact-once, and fail-closed
+rules only to the actor, operation identity, state, time, and loss they govern.
+A failed-instance reuse ban does not prohibit a distinct fresh run unless the
+current authority says so. Do not widen permission or prohibition by analogy.
 
 ## Load Supporting Guidance Only When It Matters
 
@@ -88,7 +91,7 @@ and irreversible effects.
 
 For a truly local code edit that cannot alter those concerns, reading the reference is optional. Still apply its removal question before accepting any new abstraction, state, branch, compatibility path, or coordination logic.
 
-Read [`references/evidence-calibrated-testing.md`](references/evidence-calibrated-testing.md) before adding or running tests only when their design or scope materially affects completion—for example, when choosing focused, broad, or full validation; diagnosing an escaped defect; or supporting a receiver, runtime, state, or time claim. A local check with a settled owner, contract, and impact does not require it.
+Read [`references/evidence-calibrated-testing.md`](references/evidence-calibrated-testing.md) before choosing, adding, or running tests or other completion evidence when that choice could materially affect acceptance—for example, when deciding among focused, broad, full, receiver, operational, or real-run validation; diagnosing an escaped defect; or supporting a runtime, state, or time claim. A local check with a settled owner, contract, and impact does not require it.
 
 For ChatGPT Work tasks such as research, analysis, writing, documents, slides, spreadsheets, communication, or ordinary knowledge work, do not read the software architecture reference unless the actual subject is code or software architecture.
 

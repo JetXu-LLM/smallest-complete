@@ -7,7 +7,8 @@ enough to act, finish exactly what was asked, prove it works, and stop before th
 side quests. For non-trivial coding and architecture work, it conditionally applies an
 [`elegant-architecture`](skills/smallest-complete/references/elegant-architecture.md)
 lens—clear control, explicit ownership, stable handoffs, and only the state the
-real job requires. When test design materially affects completion, it applies
+real job requires. When the choice of tests or other validation evidence
+materially affects completion, it applies
 [`evidence-calibrated-testing`](skills/smallest-complete/references/evidence-calibrated-testing.md)
 to derive evidence from the real claim rather than from test volume. It works
 backward from the receiver's next action, then delivers one value path within
@@ -48,7 +49,7 @@ Smallest Complete keeps scope, architecture, and validation tied to the same rea
 
 | | **Scope discipline** | **Architecture discipline** | **Testing discipline** |
 | --- | --- | --- | --- |
-| **Applies to** | Complex Codex and ChatGPT Work tasks | Non-trivial coding, debugging, refactoring, migration, system design, or architecture work | Material test design, escaped failures, receiver/operational claims, or focused-versus-full selection |
+| **Applies to** | Complex Codex and ChatGPT Work tasks | Non-trivial coding, debugging, refactoring, migration, system design, or architecture work | Material test/evidence design, escaped failures, receiver/operational/real-run claims, or focused-versus-full selection |
 | **Question** | Is this inside what was actually authorized? | Is this the clearest structure the evidence requires? | What failure must the evidence distinguish, at which real boundary? |
 | **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, brittle handoffs, speculative defenses, and tangled coordination | Self-certified fixtures, proxy-green completion, and low-information reruns |
 | **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference | Conditional [`evidence-calibrated-testing.md`](skills/smallest-complete/references/evidence-calibrated-testing.md) reference |
@@ -71,10 +72,11 @@ before planning or editing.
 
 [Read the complete architecture guidance →](skills/smallest-complete/references/elegant-architecture.md)
 
-## When testing materially affects completion
+## When validation evidence materially affects completion
 
-For non-trivial test strategy, escaped defects, receiver or operational claims,
-or a real choice between focused and full validation, the Skill reads
+For non-trivial test strategy, escaped defects, receiver, operational, or
+real-run claims, or a consequential choice among focused, broad, full, and
+other completion evidence, the Skill reads
 [`evidence-calibrated-testing.md`](skills/smallest-complete/references/evidence-calibrated-testing.md).
 It derives failure scenarios from real losses, receivers, operation, and semantic
 impact; chooses the matching oracle and boundary; and limits every green claim

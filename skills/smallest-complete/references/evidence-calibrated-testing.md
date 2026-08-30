@@ -116,6 +116,12 @@ Changed line count is not the testing boundary. Trace the behavior instead:
 
 `changed behavior -> owner -> public contract or shared state -> direct consumers -> user or agent journeys -> losses and hard boundaries`
 
+Do not rank evidence by labels such as unit, integration, staging, production,
+or full suite. Compare how directly it answers the claim, what decision either
+result changes, and the action's actual cost, reversibility, isolation, and
+exposure to people, data, money, or other protected effects. A label is not a
+risk assessment.
+
 During implementation, continue through this order only while the change's semantic impact reaches the next layer:
 
 1. Run the direct reproducer or new-behavior check.
@@ -123,6 +129,14 @@ During implementation, continue through this order only while the change's seman
 3. Run affected consumer tests when a public boundary changed or may leak.
 4. Run the shortest real route when host, state, timing, or side effects matter.
 5. Run full regression once at a stable merge, release, or production boundary, or earlier when the impact cannot be bounded safely.
+
+When the completion claim is that a real workflow operates and current
+authority permits a distinct fresh run with bounded, acceptable consequences,
+run the necessary focused prerequisites and then that route before broad
+indirect regression. Do not postpone the decisive observation behind checks
+that cannot answer the claim. Preserve hard gates for permissions, privacy,
+integrity, shared users or data, external cost, contractual limits, and
+irreversible effects; directness never widens authorization.
 
 Broaden validation when the change touches shared core behavior, protocol or
 schema, serialization, authentication, permissions, privacy, public API or ABI,
@@ -163,6 +177,11 @@ A failed check establishes that its observed path failed. It does not
 automatically authorize rollback, redesign, or another large test cycle. A
 passing check supports only the actor, input, environment, state, time, and
 boundary it actually exercised.
+
+A failure may terminate the observed instance without settling the task's
+claim. Preserve that instance and its evidence when required, then determine
+separately whether current authority permits or requires a fresh run. Do not
+reuse a prohibited instance, assume fresh-run permission, or infer a wider ban.
 
 Case count, pass rate, coverage, mutation score, schema validity, and artifact
 existence are useful local signals in the right setting. None automatically
