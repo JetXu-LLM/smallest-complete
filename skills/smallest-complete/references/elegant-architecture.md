@@ -133,6 +133,8 @@ Make each module:
 - clear about failures it cannot handle;
 - idempotent where retries could repeat an external effect.
 
+Let testability come from these same real seams. Tests consume a capability contract; they do not co-own its meaning or justify exposing internal state.
+
 For a consumed capability or declared handoff, treat the public boundary as an
 information boundary and design backward from the receiver's job, visible
 information, and next action. Consumers inform meaning, the domain capability
@@ -215,6 +217,8 @@ Before adding a module, service, queue, state, mode, abstraction, compatibility
 layer, or coordination path, ask:
 
 > What required behavior or hard rule would fail today if this were omitted?
+
+Apply the same question to test-only branches, modes, state, interfaces, and alternate control paths. Mock or fixture convenience is not a product requirement; prefer a real seam or keep the accommodation inside the test harness.
 
 For a safeguard, name the current loss, protected actor, and burden. Applicable
 permission, privacy, integrity, legal, safety, and irreversible-effect protections

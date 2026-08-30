@@ -4,11 +4,14 @@
 
 A lightweight Skill for Codex and ChatGPT agents: once a complex job is clear
 enough to act, finish exactly what was asked, prove it works, and stop before the
-side quests. For non-trivial coding and architecture work, it also applies an
+side quests. For non-trivial coding and architecture work, it conditionally applies an
 [`elegant-architecture`](skills/smallest-complete/references/elegant-architecture.md)
 lens—clear control, explicit ownership, stable handoffs, and only the state the
-real job requires. It works backward from the receiver's next action, then
-delivers one value path within the minimum hard boundaries that must hold now.
+real job requires. When test design materially affects completion, it applies
+[`evidence-calibrated-testing`](skills/smallest-complete/references/evidence-calibrated-testing.md)
+to derive evidence from the real claim rather than from test volume. It works
+backward from the receiver's next action, then delivers one value path within
+the minimum hard boundaries that must hold now.
 
 <p>
   <img alt="Installer: Codex" src="https://img.shields.io/badge/installer-Codex-0F64B5?style=flat-square">
@@ -39,21 +42,18 @@ the Skill, and verifies the result. When it finishes, start a new task.
 | --- | --- | --- |
 | One Skill directory + one global activation block | Existing Skills and `AGENTS.md` instructions | Runtime, hooks, dependencies, accounts, or telemetry |
 
-## One Skill, two disciplines
+## One Skill, three disciplines
 
-Smallest Complete watches for the same failure at two moments: doing more than
-was authorized, and making necessary code or architecture more tangled than
-the evidence requires.
+Smallest Complete keeps scope, architecture, and validation tied to the same real job.
 
-| | **Scope discipline** | **Architecture discipline** |
-| --- | --- | --- |
-| **Applies to** | Complex Codex and ChatGPT Work tasks | Non-trivial coding, debugging, refactoring, migration, system design, or architecture work |
-| **Question** | Is this inside what was actually authorized? | Is this the clearest structure the evidence requires? |
-| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, brittle handoffs, speculative defenses, and tangled coordination |
-| **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference |
+| | **Scope discipline** | **Architecture discipline** | **Testing discipline** |
+| --- | --- | --- | --- |
+| **Applies to** | Complex Codex and ChatGPT Work tasks | Non-trivial coding, debugging, refactoring, migration, system design, or architecture work | Material test design, escaped failures, receiver/operational claims, or focused-versus-full selection |
+| **Question** | Is this inside what was actually authorized? | Is this the clearest structure the evidence requires? | What failure must the evidence distinguish, at which real boundary? |
+| **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, brittle handoffs, speculative defenses, and tangled coordination | Self-certified fixtures, proxy-green completion, and low-information reruns |
+| **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference | Conditional [`evidence-calibrated-testing.md`](skills/smallest-complete/references/evidence-calibrated-testing.md) reference |
 
-First it keeps the result inside the ask. Then, when the task genuinely requires
-code or architecture, it keeps the structure clear.
+The references load only when their decisions are material. A simple task stays simple.
 
 ## When the task really needs architecture
 
@@ -70,6 +70,17 @@ before planning or editing.
 [![Architecture comparison: accidental complexity with overlapping decision owners and shared state versus elegant architecture with one control path, independent capability modules, honest state, and bounded agent judgment](docs/assets/elegant-architecture.png)](skills/smallest-complete/references/elegant-architecture.md)
 
 [Read the complete architecture guidance →](skills/smallest-complete/references/elegant-architecture.md)
+
+## When testing materially affects completion
+
+For non-trivial test strategy, escaped defects, receiver or operational claims,
+or a real choice between focused and full validation, the Skill reads
+[`evidence-calibrated-testing.md`](skills/smallest-complete/references/evidence-calibrated-testing.md).
+It derives failure scenarios from real losses, receivers, operation, and semantic
+impact; chooses the matching oracle and boundary; and limits every green claim
+to the path actually exercised. Routine local checks do not load the reference.
+
+[Read the complete testing guidance →](skills/smallest-complete/references/evidence-calibrated-testing.md)
 
 ## The core contract
 
@@ -103,12 +114,13 @@ actions—not to useful thinking.
 | **Telemetry** | None |
 | **Guarantee** | None—it is guidance for capable agents, not an enforcement layer |
 
-The complete mechanism is one Skill, one conditional architecture reference, and
-one activation paragraph. The project practices what it asks agents to do.
+The complete mechanism is one Skill, two conditional references, and one
+activation paragraph. The project practices what it asks agents to do.
 
 ## Go deeper
 
 - [The complete elegant-architecture reference](skills/smallest-complete/references/elegant-architecture.md)
+- [The complete evidence-calibrated-testing reference](skills/smallest-complete/references/evidence-calibrated-testing.md)
 - [Why capable agents expand the mission](docs/why.md)
 - [Design and architectural choices](docs/design.md)
 - [Evaluation without invented success rates](docs/evaluation.md)

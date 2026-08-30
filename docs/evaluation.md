@@ -24,6 +24,10 @@ At minimum, score both sides of the objective.
   receiver take the next action using only the public result, contract, and
   context that receiver is allowed to have?
 - Did each current public contract still have a current producer?
+- When tests were material, did the failure objective come from a real loss,
+  receiver action, operational exposure, semantic impact, or escaped incident?
+- Was the oracle authoritative or independent enough to reject a plausible wrong
+  result, and did critical cases also allow a correct alternative?
 - Was the final claim no broader than the evidence?
 
 ### Scope discipline
@@ -43,6 +47,8 @@ At minimum, score both sides of the objective.
 - Did the integrating agent inspect the whole user-visible result instead of
   accepting component reports collectively?
 - Did costly reruns distinguish causes or change a decision?
+- Did validation scope follow semantic impact through owners, contracts, state,
+  consumers, and real journeys rather than changed lines or test count?
 - For scheduled or retried work, did second and later runs skip terminal work,
   continue unfinished work, isolate local waits, and converge?
 - When a provider, store, or internal workflow changed, did the declared public
@@ -79,6 +85,13 @@ boundary. Do not expose producer reasoning or internal state. Score whether the
 receiver can act, what clarification or repair it needs, and whether the
 producer transferred interpretation or recovery work across the boundary.
 
+For a material testing claim, check both directions. A plausible bad control
+must fail for the intended reason, including proof that its fixture established
+the claimed precondition. A semantically correct alternative should still pass.
+At a stable release boundary, full regression may corroborate but must not
+replace the shortest direct receiver or operational acceptance on the same
+final candidate when intervening changes could affect that claim.
+
 The test set should include:
 
 - local software fixes where a broader redesign is tempting;
@@ -96,12 +109,19 @@ The test set should include:
   effects must hold from the first slice, while speculative recovery,
   compatibility, or governance should not precede useful capability;
 - scheduled or retried tasks that pass once but starve or repeat work later.
+- generated suites whose fixtures, mocks, implementation, oracle, and reviewer
+  share one wrong model;
+- escaped natural inputs that should update a failure family rather than only
+  add a case-specific regression;
+- paired small and shared changes that require different focused/full scopes.
 
 Include negative controls in which a hard boundary must precede value delivery,
 an observed repeated side effect requires idempotency, a current consumer needs
 a compatibility adapter, a helper has no public consumer, or receiver goals
-conflict. These distinguish receiver discipline from schema ceremony,
-speculative empathy, and indiscriminate removal of safeguards.
+conflict, a local fixture already proves its precondition, or a stable release
+candidate genuinely requires full regression. These distinguish receiver and
+testing discipline from schema ceremony, speculative empathy, ritual distrust,
+and indiscriminate avoidance of broad validation.
 
 ## Activation evaluation
 
@@ -112,7 +132,11 @@ prompt set:
 - **positive prompts:** complex or scope-expandable work that should invoke it;
 - **negative prompts:** simple questions and trivial local edits that should not;
 - **boundary prompts:** research, writing, and creative work that should use the
-  core Skill without loading the software architecture reference.
+  core Skill without loading either software reference.
+
+Also test conditional-reference routing: architecture only, testing only, both,
+and neither. A local check with a settled owner, contract, and impact must not
+load the testing reference.
 
 Track both recall and precision. A Skill that triggers on everything becomes
 noise; a Skill that rarely triggers cannot affect behavior.

@@ -1,6 +1,6 @@
 ---
 name: smallest-complete
-description: "Complete complex work once its objective, authorization, and problem are clear enough to act: define the smallest fully working outcome, preserve required behavior, maintain one coherent path, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for multi-step, long-running, delegated, resumed, design, implementation, debugging, refactoring, migration, document, presentation, or operational work whose main challenge is bounded execution and completion. If the central uncertainty is still the value function, problem boundary, causal or evidence model, owner, or governing principle, settle it before using this skill to converge. For non-trivial coding or architecture execution, also read the bundled elegant-architecture reference. Do not use for simple questions or trivial transformations."
+description: "Complete complex work once its objective, authorization, and problem are clear enough to act: define the smallest fully working outcome, preserve required behavior, maintain one coherent path, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for multi-step, long-running, delegated, resumed, design, implementation, debugging, refactoring, migration, document, presentation, or operational work whose main challenge is bounded execution and completion. If the central uncertainty is still the value function, problem boundary, causal or evidence model, owner, or governing principle, settle it before using this skill to converge. For non-trivial coding or architecture execution, read the bundled elegant-architecture reference; when test design or validation materially affects completion, read evidence-calibrated-testing. Do not use for simple questions or trivial transformations."
 ---
 
 # Smallest Complete
@@ -75,7 +75,7 @@ before implementation, costly validation, or irreversible action. Do not pick
 one implicitly or invent a deterministic guard, workflow, or subsystem to make
 the contradiction appear solved.
 
-## Load the Architecture Guidance Only for Coding and Architecture Work
+## Load Supporting Guidance Only When It Matters
 
 For architecture design, system design, non-trivial coding, refactoring,
 migration, or debugging that may change structure, ownership, control flow,
@@ -86,17 +86,13 @@ one clear end-to-end control path, independently callable capability modules wit
 and only the state required by business facts or safe recovery. Let agents handle ambiguous and reversible cases while deterministic code protects hard rules
 and irreversible effects.
 
-For a truly local code edit that cannot alter those concerns, reading the
-reference is optional. Still apply its removal question before accepting any
-new abstraction, state, branch, compatibility path, or coordination logic.
+For a truly local code edit that cannot alter those concerns, reading the reference is optional. Still apply its removal question before accepting any new abstraction, state, branch, compatibility path, or coordination logic.
 
-For ChatGPT Work tasks such as research, analysis, writing, documents, slides,
-spreadsheets, communication, or ordinary knowledge work, do not read the
-software architecture reference unless the actual subject is code or software
-architecture.
+Read [`references/evidence-calibrated-testing.md`](references/evidence-calibrated-testing.md) before adding or running tests only when their design or scope materially affects completion—for example, when choosing focused, broad, or full validation; diagnosing an escaped defect; or supporting a receiver, runtime, state, or time claim. A local check with a settled owner, contract, and impact does not require it.
 
-Apply the core scope, completion, evidence, and stopping rules in this file
-directly.
+For ChatGPT Work tasks such as research, analysis, writing, documents, slides, spreadsheets, communication, or ordinary knowledge work, do not read the software architecture reference unless the actual subject is code or software architecture.
+
+Apply the core scope, completion, evidence, and stopping rules in this file directly.
 
 ## Choose the Smallest Complete Path
 
@@ -211,6 +207,8 @@ breadth, stakes, hard rules, and observed failures. Prefer the artifact,
 behavior, diff, runtime evidence, source support, or real user path that
 directly demonstrates completion. Do not substitute a large indirect test
 suite or new validation machinery for a missing direct proof.
+
+When tests are material, derive their failure objective, oracle, observation boundary, method, and execution scope from the real claim rather than from the current implementation alone.
 
 For a declared handoff or public capability, validate from the receiver side using only the public result, contract, and allowed context. A schema, artifact, readback, or producer test is insufficient when the receiver cannot complete its next action, must bypass the public boundary, has no current producer, or must change with an internal source, store, or workflow.
 

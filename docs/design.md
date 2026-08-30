@@ -1,7 +1,7 @@
 # Design
 
 Smallest Complete is intentionally not an agent framework. It is a small
-instruction system with three responsibilities and three corresponding files.
+instruction system with one core Skill and two conditional references.
 
 ## The complete mechanism
 
@@ -9,8 +9,10 @@ instruction system with three responsibilities and three corresponding files.
 global AGENTS.md activation
         ↓
 skills/smallest-complete/SKILL.md
-        ↓ only for non-trivial coding or architecture work
-references/elegant-architecture.md
+        ├─ only for non-trivial coding or architecture work
+        │  references/elegant-architecture.md
+        └─ only when test design or validation is material
+           references/evidence-calibrated-testing.md
 ```
 
 ### Global activation: remember when it matters
@@ -43,7 +45,7 @@ This applies to coding, architecture, research, analysis, writing, documents,
 presentations, and operations. It deliberately does not force software
 architecture language onto ordinary knowledge work.
 
-### Conditional reference: shape code and architecture without bloating every task
+### Conditional architecture reference: shape code without bloating every task
 
 [`elegant-architecture.md`](../skills/smallest-complete/references/elegant-architecture.md)
 loads only for architecture, system design, non-trivial coding, refactoring,
@@ -71,20 +73,37 @@ These defaults are not a universal topology. Distributed coordination and
 stateful components are valid when present requirements, measured scale, or
 material risk require them.
 
+### Conditional testing reference: calibrate evidence without testing every task
+
+[`evidence-calibrated-testing.md`](../skills/smallest-complete/references/evidence-calibrated-testing.md)
+loads only when test design or validation materially affects completion: an
+escaped failure, a receiver or operational claim, or a consequential choice
+among focused, broad, and full evidence.
+
+It derives important failure scenarios from real losses, receiver work,
+operational exposure, semantic impact, and escaped incidents. It then chooses an
+oracle, observation boundary, test method, and execution scope that match the
+claim; calibrates critical tests against plausible bad behavior and correct
+alternatives; and limits green claims to the evidence actually observed.
+
+Long-lived projects may preserve a compact validation map only when repeated
+rediscovery justifies it and the current task authorizes documentation. The
+reference defines no mandatory filename, schema, budget, state, or workflow.
+
 ## Why this structure
 
 The project uses progressive disclosure. The activation paragraph is always
-available, the core Skill loads for qualifying work, and the architecture
-reference loads only when the task is actually about coding or architecture.
+available, the core Skill loads for qualifying work, and each reference loads
+only when its decisions are material.
 
 That avoids two symmetric failures:
 
 1. A short global slogan is too weak to guide difficult work.
-2. A full architecture doctrine in every conversation wastes context and can
-   distort research, writing, and creative tasks.
+2. Full architecture and testing doctrines in every conversation waste context
+   and can distort simple work.
 
-One Skill plus one conditional reference is the smallest structure that keeps
-both boundaries explicit.
+One Skill plus two conditional references keeps the methods available without
+making either a permanent task protocol.
 
 ## The addition gate
 
