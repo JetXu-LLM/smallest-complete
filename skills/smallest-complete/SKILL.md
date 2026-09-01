@@ -110,8 +110,8 @@ it must not create a second semantic or control path. Explore competing
 hypotheses when evidence warrants them, but do not preserve old plans or
 compatibility machinery merely because they existed.
 
-As soon as practical within the current hard boundaries, send representative real input through the real path and inspect the result through the public boundary that its intended reader or system will use. The path does not end when the producer emits an output: using only the public result, contract, and allowed context, the receiver must be able to take its next required action without reconstructing internals, repairing meaning, or asking the producer to finish the handoff.
-This tests the route, not the full contract. If the current result promises a published output, handoff, or reusable capability, its smallest documented, consumer-stable contract is part of completion even before receiver code exists. Define only the business meaning and access that the current capability can reliably own, not future receiver logic.
+As soon as practical within the current hard boundaries, send representative real input through the real path and inspect the result through the public boundary, actual medium, and surrounding context that its intended reader or system will use. The path does not end when the producer emits an output: using only the public result, contract, and allowed context, the receiver must be able to take its next required action without reconstructing internals, repairing meaning, or asking the producer to finish the handoff.
+For a handoff or reader-facing artifact, completeness is relative to the actual receiver's state. Provide the missing orientation for a fresh receiver, the decision-changing delta for an informed receiver, or the observed divergence and correct next state for a receiver already off course. Do not transfer producer history, rejected alternatives, or internal concepts that do not change the receiver's action. This tests the route, not the full contract. If the current result promises a published output, handoff, or reusable capability, its smallest documented, consumer-stable contract is part of completion even before receiver code exists. Define only the business meaning and access that the current capability can reliably own, not future receiver logic.
 
 Every proposed addition to the deliverable, implementation, workflow, or set of
 actions must satisfy at least one of these conditions:
@@ -213,7 +213,7 @@ suite or new validation machinery for a missing direct proof.
 
 When tests are material, derive their failure objective, oracle, observation boundary, method, and execution scope from the real claim rather than from the current implementation alone.
 
-For a declared handoff or public capability, validate from the receiver side using only the public result, contract, and allowed context. A schema, artifact, readback, or producer test is insufficient when the receiver cannot complete its next action, must bypass the public boundary, has no current producer, or must change with an internal source, store, or workflow.
+For a declared handoff, public capability, or reader-facing artifact, validate from the receiver side in the actual medium and surrounding context using only the public result, contract, and allowed context. A schema, artifact, readback, internal metric, automated check, or producer test is insufficient when the receiver cannot complete its next action, must reconstruct implementation or meaning, learns irrelevant rejected concepts, must bypass the public boundary, has no current producer, or must change with an internal source, store, or workflow.
 
 Match each claim to its evidence level:
 
@@ -248,9 +248,8 @@ Do not mistake any of the following for completion:
 - supporting infrastructure built before the primary deliverable;
 - a summary of work that has not produced the promised artifact or behavior.
 
-If validation fails and evidence isolates one owning cause while the route still
-holds, repair it and test again. Reopen the design when the objective, route,
-ownership, or validation logic no longer remains coherent as a whole.
+If final acceptance exposes a result-only mismatch while the route still holds, recover the accepted positive baseline and repair one integrated delta rather than layering local prohibitions. If validation instead isolates one owning implementation cause, repair it and test again.
+Reopen the design when the objective, route, ownership, or validation logic no longer remains coherent as a whole.
 
 ## Stop When Complete
 

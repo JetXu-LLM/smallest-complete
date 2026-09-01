@@ -35,7 +35,8 @@ It does not duplicate the Skill body. Global context stays small.
 - make additions earn their place;
 - repair at an isolated owning boundary or reintegrate when local fixes no longer
   form one system;
-- exercise representative real input through the intended receiver action early;
+- exercise representative real input through the intended receiver action and
+  actual medium early;
 - validate the observable result;
 - retain root whole-result acceptance without reassigning semantic ownership;
 - calibrate claims to evidence;
@@ -44,6 +45,15 @@ It does not duplicate the Skill body. Global context stays small.
 This applies to coding, architecture, research, analysis, writing, documents,
 presentations, and operations. It deliberately does not force software
 architecture language onto ordinary knowledge work.
+
+For a handoff or reader-facing artifact, completeness is relative to the current
+receiver. A fresh receiver may need orientation, an informed receiver may need
+only the decision-changing delta, and a receiver already off course needs the
+observed divergence and correct next state. Final acceptance uses the actual
+channel and surrounding context. A result-only mismatch is reconstructed from
+the accepted positive state; an artifact or implementation change is handed
+back as one integrated repair; the design reopens only when the route,
+ownership, or validation logic is no longer coherent.
 
 ### Conditional architecture reference: shape code without bloating every task
 

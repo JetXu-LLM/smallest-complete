@@ -23,6 +23,10 @@ At minimum, score both sides of the objective.
 - If the result declared a handoff or public capability, could its intended
   receiver take the next action using only the public result, contract, and
   context that receiver is allowed to have?
+- Did a fresh, informed, or already off-course receiver receive the different
+  context its actual state required, without irrelevant producer history?
+- For a reader-facing result, did acceptance exercise the actual channel,
+  rendering, sequence, playback, or surrounding context that could change use?
 - Did each current public contract still have a current producer?
 - When tests were material, did the failure objective come from a real loss,
   receiver action, operational exposure, semantic impact, or escaped incident?
@@ -84,6 +88,12 @@ the public result, contract, its real task, and information available at that
 boundary. Do not expose producer reasoning or internal state. Score whether the
 receiver can act, what clarification or repair it needs, and whether the
 producer transferred interpretation or recovery work across the boundary.
+
+Vary the same handoff across a fresh receiver, an informed receiver, and one
+already acting on a wrong route. Also move a reader-facing result into its real
+medium or established surrounding artifact. Check that necessary orientation is
+preserved, irrelevant rejected concepts are not introduced, active divergence
+is corrected directly, and producer-green evidence does not override actual use.
 
 For a material testing claim, check both directions. A plausible bad control
 must fail for the intended reason, including proof that its fixture established

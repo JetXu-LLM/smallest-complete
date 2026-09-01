@@ -12,7 +12,9 @@ materially affects completion, it applies
 [`evidence-calibrated-testing`](skills/smallest-complete/references/evidence-calibrated-testing.md)
 to derive evidence from the real claim rather than from test volume. It works
 backward from the receiver's next action, then delivers one value path within
-the minimum hard boundaries that must hold now.
+the minimum hard boundaries that must hold now. Handoffs are complete relative
+to the receiver's current state, and reader-facing results are accepted in their
+actual medium and surrounding context rather than from producer checks alone.
 
 <p>
   <img alt="Installer: Codex" src="https://img.shields.io/badge/installer-Codex-0F64B5?style=flat-square">
@@ -89,7 +91,7 @@ to the path actually exercised. Routine local checks do not load the reference.
 | Principle | Meaning |
 | --- | --- |
 | **Smallest** | No adjacent deliverables, speculative systems, or permanent machinery. |
-| **Complete** | The requested result actually works for its next receiver and required behavior is preserved. |
+| **Complete** | The requested result works for its next receiver in the real medium, with required behavior preserved. |
 | **Coherent** | Long work keeps one route; local fixes fit it or replace part of it, and declared handoffs stay stable. |
 | **Proven** | Completion claims match observable evidence. |
 | **Stop** | Useful discoveries do not silently become new work. |
