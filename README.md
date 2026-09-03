@@ -56,7 +56,11 @@ Smallest Complete keeps scope, architecture, and validation tied to the same rea
 | **Stops** | Scope creep and adjacent “helpful” work | Extra decision owners, brittle handoffs, speculative defenses, and tangled coordination | Self-certified fixtures, proxy-green completion, and low-information reruns |
 | **Source** | Core [`SKILL.md`](skills/smallest-complete/SKILL.md) | Conditional [`elegant-architecture.md`](skills/smallest-complete/references/elegant-architecture.md) reference | Conditional [`evidence-calibrated-testing.md`](skills/smallest-complete/references/evidence-calibrated-testing.md) reference |
 
-The references load only when their decisions are material. A simple task stays simple.
+The runtime references load only when their decisions are material. A simple task
+stays simple. The package also includes a
+[`casebook`](skills/smallest-complete/references/casebook.md) and a
+[`self-contained evaluation rubric`](skills/smallest-complete/references/eval-rubric.md)
+for learning, revising, and testing the method; ordinary execution does not load them.
 
 ## When the task really needs architecture
 
@@ -118,13 +122,16 @@ actions—not to useful thinking.
 | **Telemetry** | None |
 | **Guarantee** | None—it is guidance for capable agents, not an enforcement layer |
 
-The complete mechanism is one Skill, two conditional references, and one
-activation paragraph. The project practices what it asks agents to do.
+The complete runtime mechanism is one Skill, two conditional references, and one
+activation paragraph. Two non-runtime evaluation references ship beside it so
+the method can be tested without making evaluation ceremony part of every task.
 
 ## Go deeper
 
 - [The complete elegant-architecture reference](skills/smallest-complete/references/elegant-architecture.md)
 - [The complete evidence-calibrated-testing reference](skills/smallest-complete/references/evidence-calibrated-testing.md)
+- [The phase-specific casebook](skills/smallest-complete/references/casebook.md)
+- [The self-contained evaluation rubric](skills/smallest-complete/references/eval-rubric.md)
 - [Why capable agents expand the mission](docs/why.md)
 - [Design and architectural choices](docs/design.md)
 - [Evaluation without invented success rates](docs/evaluation.md)

@@ -80,8 +80,8 @@ For a non-trivial Skill change:
    clear contradiction or unsafe instruction.
 3. Propose the smallest change that addresses that failure without weakening
    unrelated behavior.
-4. Check `SKILL.md`, `agents/openai.yaml`, and the conditional architecture
-   reference for consistency.
+4. Check `SKILL.md`, `agents/openai.yaml`, both conditional runtime references,
+   and the phase-specific evaluation assets for consistency.
 5. Test positive, negative, and boundary prompts with isolated runs when
    practical.
 6. Report what the evidence demonstrates and what remains unknown.

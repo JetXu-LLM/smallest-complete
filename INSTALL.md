@@ -18,8 +18,8 @@ When following the prompt above, perform only the procedure below.
 
 ### 1. Resolve source and target paths
 
-Use the `v0.1.9` checkout when it is already available. Otherwise, clone tag
-`v0.1.9` from `https://github.com/JetXu-LLM/smallest-complete` into a fresh
+Use the `v0.1.10` checkout when it is already available. Otherwise, clone tag
+`v0.1.10` from `https://github.com/JetXu-LLM/smallest-complete` into a fresh
 temporary directory. Do not install from a moving branch. Do not execute code
 from the repository; installation copies text files only.
 
@@ -45,9 +45,11 @@ SKILL.md
 agents/openai.yaml
 references/elegant-architecture.md
 references/evidence-calibrated-testing.md
+references/casebook.md
+references/eval-rubric.md
 ```
 
-From the repository root, verify the five published installation inputs against
+From the repository root, verify the seven published installation inputs against
 `SHA256SUMS`. Stop and report the mismatch if verification fails.
 
 ### 2. Inspect the current installation
@@ -88,7 +90,7 @@ under `<codex-home>/skills/`, because Codex may discover it as another Skill.
 
 Create `<codex-home>/skills/` if needed. Copy the complete
 `skills/smallest-complete/` directory into
-`<codex-home>/skills/smallest-complete/`, preserving the four source files
+`<codex-home>/skills/smallest-complete/`, preserving the six source files
 byte-for-byte and preserving their relative paths.
 
 Do not rewrite, summarize, reformat, or “improve” the Skill while installing it.
@@ -108,14 +110,13 @@ rewrite existing instructions.
 Verify all of the following:
 
 1. The installed `SKILL.md`, `agents/openai.yaml`,
-   `references/elegant-architecture.md`, and
-   `references/evidence-calibrated-testing.md` exist.
+   `references/elegant-architecture.md`,
+   `references/evidence-calibrated-testing.md`,
+   `references/casebook.md`, and `references/eval-rubric.md` exist.
 2. Each installed file is byte-for-byte identical to the repository source.
 3. `SKILL.md` declares `name: smallest-complete` and includes a non-empty
    `description`.
-4. The installed Skill can resolve its relative
-   `references/elegant-architecture.md` and
-   `references/evidence-calibrated-testing.md` links.
+4. The installed Skill can resolve its relative links to all four reference files.
 5. Global `AGENTS.md` contains exactly one `## Smallest Complete` activation
    section and all pre-existing content is otherwise unchanged.
 6. If a Skill validator is already available in the Codex environment, run it

@@ -28,11 +28,17 @@ At minimum, score both sides of the objective.
 - For a reader-facing result, did acceptance exercise the actual channel,
   rendering, sequence, playback, or surrounding context that could change use?
 - Did each current public contract still have a current producer?
+- When the user rejected an agent-added choice but the contract stayed coherent,
+  did the agent restore the accepted baseline instead of layering an exception?
+- Did the integrating agent assemble and validate the whole result without
+  rewriting a component-owned semantic judgment?
 - When tests were material, did the failure objective come from a real loss,
   receiver action, operational exposure, semantic impact, or escaped incident?
 - Was the oracle authoritative or independent enough to reject a plausible wrong
   result, and did critical cases also allow a correct alternative?
 - Was the final claim no broader than the evidence?
+- When an agreed observation window ended without a qualifying event, did the
+  task stop while avoiding any broader quality claim?
 
 ### Scope discipline
 
@@ -83,6 +89,11 @@ For a meaningful comparison:
 5. Score outputs blind when practical.
 6. Repeat tasks; one dramatic example is not aggregate evidence.
 
+The bundled [`eval-rubric.md`](../skills/smallest-complete/references/eval-rubric.md)
+is the standalone phase-specific scoring contract. The bundled
+[`casebook.md`](../skills/smallest-complete/references/casebook.md) is for learning
+and revision; do not expose it to blind subjects.
+
 For a declared handoff, include a clean-receiver probe. Give the receiver only
 the public result, contract, its real task, and information available at that
 boundary. Do not expose producer reasoning or internal state. Score whether the
@@ -126,6 +137,10 @@ The test set should include:
 - paired small and shared changes that require different focused/full scopes.
 - operational completion tasks where a bounded fresh real run is the decisive
   evidence but a broad indirect suite is easier to execute.
+- local corrections where the accepted contract remains sound but an agent-added
+  path must be removed rather than preserved through another exception;
+- bounded observation tasks that should end at the agreed window without turning
+  missing evidence into a reliability or population claim.
 
 Include negative controls in which a hard boundary must precede value delivery,
 an observed repeated side effect requires idempotency, a current consumer needs
@@ -191,7 +206,8 @@ credentials before publishing anything.
 The release can claim that:
 
 - the published Skill matches the locally developed source;
-- both conditional references resolve correctly;
+- both conditional runtime references and both non-runtime evaluation references
+  resolve correctly;
 - the installation contract is idempotent and preserves unrelated global
   instructions by design;
 - the repository makes no runtime or telemetry changes.

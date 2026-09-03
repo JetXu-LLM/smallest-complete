@@ -1,280 +1,185 @@
 ---
 name: smallest-complete
-description: "Complete complex work once its objective, authorization, and problem are clear enough to act: define the smallest fully working outcome, preserve required behavior, maintain one coherent path, validate only what the evidence proves, and stop before discoveries become unrequested deliverables or actions. Use for multi-step, long-running, delegated, resumed, design, implementation, debugging, refactoring, migration, document, presentation, or operational work whose main challenge is bounded execution and completion. If the central uncertainty is still the value function, problem boundary, causal or evidence model, owner, or governing principle, settle it before using this skill to converge. For non-trivial coding or architecture execution, read the bundled elegant-architecture reference; when the choice of tests or other validation evidence materially affects completion, read evidence-calibrated-testing. Do not use for simple questions or trivial transformations."
+description: "Complete non-trivial work once its objective, authorization, decision frame, and acceptance criteria are stable enough to act: choose the smallest fully working route, preserve required behavior, validate the actual outcome including the receiver boundary when material, and stop within scope. Use for multi-step, delegated, resumed, design, implementation, debugging, refactoring, migration, artifact, document, presentation, operational, or final-synthesis work whose main challenge is bounded execution and completion. If the central uncertainty is still the value function, problem boundary, causal or evidence model, decision owner, time horizon, or governing principle, stop convergence and return to framing before proceeding. Do not use for simple questions or trivial transformations."
 ---
 
 # Smallest Complete
 
-Deliver the smallest result that fully completes the user's current job. Do not
-confuse "smallest" with a partial prototype, the fewest changed lines, or the
-quickest plausible output. The result must work, preserve required behavior,
-satisfy the relevant hard rules, and be supported by proportionate evidence.
-Everything else must earn its place.
+Deliver the smallest result that fully completes the user's current job. “Smallest” does not mean a partial prototype, the fewest changed lines, or the quickest plausible output. It constrains what becomes permanent or delivered, not the inquiry and validation needed to make the result real.
 
-The requested observable outcome—not the amount of implementation or effort—is
-the unit of completion. Code, tests, documents, deployments, and elapsed time
-count only when they are the requested result or evidence that it exists.
+The requested observable outcome—not implementation volume, test count, elapsed time, or producer effort—is the unit of completion.
 
-"Smallest" constrains what is delivered, changed, or made permanent—not the
-inquiry needed to understand the problem.
+## Lead only when the contract is coherent
 
-## Lead Only When the Problem Is Clear Enough
+Lead convergence, design, execution, validation, integration, and closure only after the job is stable enough to act. Do not use this skill to decide which objective, value function, causal model, owner, or evidence standard is correct.
 
-Lead convergence, design, execution, validation, and closure only after the job
-is stable enough to act. Do not use this skill to decide what problem, value
-function, owner, or evidence model is correct.
+Before acting, identify internally:
 
-Start when the objective, dominant loss, authority, sources of truth, main route,
-strongest alternative, decisive unknowns, and authorized outcome are clear
-enough to act. If execution or accumulated repairs make those premises
-incoherent, stop converging and reopen the problem before resuming. Keep the
-user's authorization and deliverable boundary unchanged.
+- the outcome the user is authorized to receive now;
+- the observable evidence that would make it complete;
+- current hard constraints and authoritative sources;
+- the systems, files, people, environments, and actions in scope;
+- the accepted route and owner of each material judgment;
+- the actual receiver or use boundary when it affects completion;
+- decisive unknowns that execution may safely resolve; and
+- the condition that would invalidate the contract and require the problem to be reopened.
 
-## Establish the Current Contract
+A requested plan, review, report, prompt, design, or handoff is the deliverable. Do not silently turn it into implementation. A long-term goal or roadmap does not authorize every useful step toward it.
 
-Before acting, identify:
+After compaction, interruption, handoff, or resume, reconstruct the current contract from the conversation, durable task state, authoritative sources, and repository or artifact state. Do not revive a stale plan merely because it remains available.
 
-- the outcome the user actually asked to receive now;
-- the observable evidence that would make that outcome complete;
-- the current binding constraints and hard rules;
-- the kind of work authorized: answer, research, review, plan, create, change,
-  operate, or publish;
-- the systems, files, people, environments, and change surface in scope;
-- what is adjacent, speculative, future-facing, or explicitly out of scope.
+For long work, maintain one compact current explanation of the route, owners, public boundary, and invariant that must survive change, together with validation status and the next step. A factually current log is insufficient if it preserves two incompatible semantic routes.
 
-A long-term goal, roadmap, or broad program explains direction; it does not
-authorize every possible step toward it in the current task. New information
-may justify further inquiry within the current question, but it does not
-authorize a new objective, deliverable, change, or external action.
+Do not create a formal specification for a simple task. Ask only when a consequential ambiguity cannot be resolved from existing context, authoritative evidence, or a safe reversible probe.
 
-Treat a requested plan, review, report, prompt, or design as the deliverable.
-Do not silently turn it into implementation. Treat implementation authority as
-permission to complete the requested result, not permission to build every
-useful neighboring capability.
+## Resolve conflicting requirements before building
 
-After context compaction, interruption, handoff, or resume, reconstruct the
-current contract from the conversation, durable task state, authoritative
-sources, and repository or artifact state before continuing. Do not revive a
-stale plan merely because it remains available. For a long task, keep a compact current explanation of the whole route, its owners, and any public handoff or capability boundary.
+Use the most recent explicit user decisions, applicable safety or legal rules, and authoritative sources as binding constraints. Treat derived metrics, examples, samples, checklists, and prior plans as aids unless the user made them requirements.
 
-Do not create a formal specification for a simple task. State or track this
-contract only as much as the work needs. If a consequential ambiguity cannot be
-resolved from available context, evidence, or a reversible probe, ask before
-choosing a path that would materially change the result.
+Do not let a lower-level gate silently redefine the job. If current binding requirements materially conflict, expose and resolve the conflict before costly implementation, broad validation, or irreversible action. Apply stop, retry, exact-once, and fail-closed rules only to the actor, operation identity, state, time, and loss they govern; do not widen permission or prohibition by analogy.
 
-## Resolve Conflicting Requirements Before Building
+When a correction invalidates an agent-added implementation, artifact, or routing choice while the accepted contract remains coherent, recover the last accepted positive baseline and replace or remove that choice. Do not preserve it by layering another prohibition, exception, adapter, or compatibility path.
 
-Use the most recent explicit user decisions, applicable safety or legal rules,
-and the authoritative source of truth as binding constraints. Treat derived
-metrics, checklists, examples, samples, and prior plans as aids unless the user
-has explicitly made them requirements.
+## Load only the reference that owns the current problem
 
-Do not let a lower-level gate silently redefine the stated job. If two current
-binding requirements materially conflict, expose the conflict and resolve it
-before implementation, costly validation, or irreversible action. Do not pick
-one implicitly or invent a deterministic guard, workflow, or subsystem to make
-the contradiction appear solved. Apply stop, retry, exact-once, and fail-closed
-rules only to the actor, operation identity, state, time, and loss they govern.
-A failed-instance reuse ban does not prohibit a distinct fresh run unless the
-current authority says so. Do not widen permission or prohibition by analogy.
+For architecture design, system design, non-trivial coding, refactoring, migration, or debugging that may change structure, ownership, control flow, state, interfaces, public contracts, or operational behavior, read [references/elegant-architecture.md](references/elegant-architecture.md) before planning or editing. A truly local edit may skip it, but still apply the removal question before accepting a new abstraction, state, branch, compatibility path, or coordination mechanism.
 
-## Load Supporting Guidance Only When It Matters
+Read [references/evidence-calibrated-testing.md](references/evidence-calibrated-testing.md) before choosing, adding, or running evidence when that choice could materially affect acceptance. Explicit triggers include:
 
-For architecture design, system design, non-trivial coding, refactoring,
-migration, or debugging that may change structure, ownership, control flow,
-state, interfaces, or operational behavior, read
-[`references/elegant-architecture.md`](references/elegant-architecture.md)
-before planning or editing. Use it as the default software-design lens: prefer
-one clear end-to-end control path, independently callable capability modules with explicit owners and consumer-stable public contracts, a simple coordinator,
-and only the state required by business facts or safe recovery. Let agents handle ambiguous and reversible cases while deterministic code protects hard rules
-and irreversible effects.
+- deciding among focused, affected, broad, full, receiver, operational, production-like, or real-run validation;
+- diagnosing a natural or escaped defect after producer-side checks passed;
+- supporting a runtime, host, state, time, repeated-run, scale, or external-effect claim;
+- preserving a failed exact instance while separately deciding whether a distinct fresh run is authorized;
+- determining whether the fixture, oracle, environment, dependency, stale state, or implementation failed; and
+- deciding whether another expensive run would change a decision.
 
-For a truly local code edit that cannot alter those concerns, reading the reference is optional. Still apply its removal question before accepting any new abstraction, state, branch, compatibility path, or coordination logic.
+Do not read the software architecture reference for ordinary research, writing, slides, spreadsheets, or communication unless the subject itself is software or system architecture. Detailed methods live in their references; do not restate or load them merely because they exist.
 
-Read [`references/evidence-calibrated-testing.md`](references/evidence-calibrated-testing.md) before choosing, adding, or running tests or other completion evidence when that choice could materially affect acceptance—for example, when deciding among focused, broad, full, receiver, operational, or real-run validation; diagnosing an escaped defect; or supporting a runtime, state, or time claim. A local check with a settled owner, contract, and impact does not require it.
+## Choose one accepted real route
 
-For ChatGPT Work tasks such as research, analysis, writing, documents, slides, spreadsheets, communication, or ordinary knowledge work, do not read the software architecture reference unless the actual subject is code or software architecture.
+Trace the shortest credible path from available inputs to the requested observable result. Reuse capabilities already provided by the repository, environment, platform, tools, operators, or agent. Prefer a reversible experiment over permanent machinery when it can cheaply resolve a material unknown.
 
-Apply the core scope, completion, evidence, and stopping rules in this file directly.
+“One route” means one accepted semantic owner and production path for the completed result. It does not prohibit parallel, reversible experiments or independent evidence gathering used to choose that route. Do not leave competing accepted meanings, control paths, outputs, or architectures in the final state.
 
-## Choose the Smallest Complete Path
+Keep each durable fact and semantic judgment under one final owner. Other components or agents may provide evidence, enforce hard rules, reject invalid output, or request revision, but they must not silently reinterpret the same judgment. If several writers are unavoidable, define the merge rule and owner of the merged result.
 
-Trace one direct path from the available inputs to the requested observable
-result. Reuse capabilities already provided by the environment, repository,
-tools, platform, operator, or agent. Prefer a reversible experiment over a
-permanent mechanism when an unknown can be resolved cheaply.
+Use a narrow representative end-to-end path early when it can reject the host, contract, interface, or route before support machinery grows. It must cross the real boundary that carries the meaning or risk, not a toy bypass.
 
-Keep one current task contract, primary route, and explanation of the whole
-result. Each local change must fit that route or explicitly replace part of it;
-it must not create a second semantic or control path. Explore competing
-hypotheses when evidence warrants them, but do not preserve old plans or
-compatibility machinery merely because they existed.
+## Treat a declared handoff as a current boundary
 
-As soon as practical within the current hard boundaries, send representative real input through the real path and inspect the result through the public boundary, actual medium, and surrounding context that its intended reader or system will use. The path does not end when the producer emits an output: using only the public result, contract, and allowed context, the receiver must be able to take its next required action without reconstructing internals, repairing meaning, or asking the producer to finish the handoff.
-For a handoff or reader-facing artifact, completeness is relative to the actual receiver's state. Provide the missing orientation for a fresh receiver, the decision-changing delta for an informed receiver, or the observed divergence and correct next state for a receiver already off course. Do not transfer producer history, rejected alternatives, or internal concepts that do not change the receiver's action. This tests the route, not the full contract. If the current result promises a published output, handoff, or reusable capability, its smallest documented, consumer-stable contract is part of completion even before receiver code exists. Define only the business meaning and access that the current capability can reliably own, not future receiver logic.
+When the current work promises a handoff, public output, reusable artifact, or capability, its smallest stable contract is part of completion now—even if downstream implementation does not yet exist.
 
-Every proposed addition to the deliverable, implementation, workflow, or set of
-actions must satisfy at least one of these conditions:
+Define only the business meaning and access the current producer can reliably own. Do not expose provider fields, source tables, storage paths, model details, workflow state, coordinator internals, or future receiver logic as public meaning.
 
-1. The requested result or acceptance evidence directly requires it.
-2. A current hard rule, material safety constraint, or irreversible effect
-   requires it.
-3. Observed evidence shows that the primary path cannot complete without it.
-4. The user explicitly authorizes the expanded result.
+Every current public contract needs:
 
-Apply this gate strictly to software development, architecture, refactoring,
-migration, debugging, and operational changes, especially when adding
-abstractions, modules, state, services, compatibility paths, safeguards, or
-coordination. When the requested outcome itself is research, analysis, writing,
-or a creative artifact rather than a software or operational change, do not use
-the gate to suppress useful inquiry or craft. An addition may also earn its
-place when it materially improves the requested artifact's accuracy, insight,
-clarity, persuasiveness, or reader experience without changing its purpose,
-audience, or requested format, and without creating another deliverable or
-external action.
+- a current producer;
+- a lifecycle owner;
+- enough documented meaning and access for the receiver to act;
+- an invariant that survives ordinary provider, store, model, transport, or internal workflow changes.
 
-If none applies, omit it. Record an adjacent finding briefly when useful, but
-do not implement it.
+A working historical reader or artifact does not make a capability current when nothing remains responsible for producing it.
 
-## Handle Discoveries Without Expanding the Mission
+## Make every addition earn its place
 
-Classify each discovery:
+A proposed addition to the deliverable, implementation, workflow, state, abstraction, compatibility path, validation machinery, or external action must satisfy at least one condition:
 
-- **Required:** It is part of the requested result. Complete it.
-- **Blocking:** The requested result cannot work without it. Resolve the
-  narrowest cause that unblocks the primary path.
-- **Current material risk:** The requested path would violate a hard rule,
-  corrupt data, create an unsafe irreversible effect, or make the claimed
-  result false. Add the smallest protection that addresses the demonstrated
-  risk.
-- **Adjacent:** It may be valuable later but is not required now. Leave it out
-  and mention it only if it materially helps the user decide what to do next.
+1. The requested result or its acceptance evidence requires it.
+2. A current hard rule, material safety boundary, privacy or data-integrity requirement, or irreversible effect requires it.
+3. Observed evidence shows the accepted route cannot complete without it.
+4. The user explicitly authorizes the expanded result or action.
 
-Do not promote an adjacent concern by calling it "robustness," "production
-readiness," "best practice," "completeness," or "future-proofing." Those are
-claims, not evidence.
+For research, analysis, writing, and creative artifacts, useful inquiry or craft may also earn its place when it materially improves the requested artifact without changing its purpose, audience, format, or external-action boundary.
 
-When a blocker exposes a broader decision whose alternatives would materially
-change cost, behavior, ownership, or risk, stop and seek authority. Do not
-disguise a redesign as a necessary fix.
+Do not promote an adjacent concern by calling it robustness, completeness, production readiness, governance, or future-proofing. Record a material adjacent finding briefly when useful; do not implement it.
 
-## Repair and Replace at the Owning Boundary
+## Execute and repair at the owning boundary
 
-Prefer a narrow repair only when evidence isolates the failure to one owner and
-the objective, primary route, and responsibility boundaries still hold. A
-downstream formatting, rendering, packaging, or presentation defect does not
-justify rerunning an accepted upstream step unless evidence shows that its
-result is wrong.
+Use agent judgment for ambiguous, low-frequency, context-dependent, and reversible cases. Use deterministic protections for permissions, privacy, data integrity, mechanically checkable hard rules, idempotency around repeated effects, and irreversible external actions.
 
-Fix the smallest complete capability or evidenced failure family, not only the
-single observed specimen. Correct the owning invariant and test the narrowest
-adjacent variant needed to show that the cause is handled. Do not turn that
-repair into a generalized framework, feature flag, migration system, or metric
-unless one of the addition conditions requires it.
+Do not encode every imagined exception. Promote an adaptation into permanent machinery only when a current contract, observed repetition, measured scale, required consistency, or material risk justifies its ongoing cost.
 
-Stop patching when the same real outcome keeps failing, repairs cross owners,
-support structure grows faster than receiver action or user value, or old and new mechanisms coexist.
-Find the earliest shared decision, restore one route and owner per judgment, and
-remove the superseded path. Delete only code, compatibility behavior, and tests
-that the new route supersedes; preserve outcome and hard-boundary tests.
+When a failure occurs, distinguish:
 
-Before replacing or simplifying an existing path, use authoritative sources and representative outputs to identify the observable behaviors and public contracts
-it must preserve. Preserve required consumer meaning and access, not a provider, store, internal workflow, or accidental topology. Do not drop required
-behavior or compatibility merely because a cleaner implementation is available. When exact wording, templates, or legacy behavior materially affect the result,
-inspect those primary sources directly; a summary is not a substitute.
+- the requested result;
+- its implementation;
+- the validation method, fixture, or oracle;
+- the environment or host;
+- an external dependency; and
+- stale or contaminated state.
 
-## Use Agent Judgment and Bound Delegation
+Repair narrowly when evidence isolates one owner and the objective, route, public boundary, and responsibility boundaries still hold. Fix the smallest evidenced failure family rather than only the observed specimen, but do not turn the repair into a general framework without need.
 
-Use the agent, tools, and existing environment for ambiguous, low-frequency,
-context-dependent, and reversible cases. Keep deterministic protections for
-permissions, data integrity, stable high-frequency rules, mechanically
-checkable validation of hard invariants, and irreversible external effects.
+Stop local patching when repairs cross owners, old and new routes coexist, support structure grows while receiver action or user value remains flat, or the whole path can no longer be explained in one pass. Stop convergence and reopen the problem at the highest invalidated level when the objective, governing mechanism, owner, route, evidence model, public contract, or tradeoff is no longer coherent. Execution difficulty alone is not sufficient.
 
-Do not encode every possible exception before it occurs. Promote an adaptation
-into permanent machinery only when observed repetition, required consistency,
-measured scale, or material risk justifies its ongoing cost.
+Before replacing or simplifying an existing path, inspect authoritative sources and representative outputs to identify required behavior and public contracts. Preserve consumer meaning and access, not accidental provider, storage, workflow, or topology details.
 
-When delegating, give each subagent a bounded outcome, relevant sources, scope,
-acceptance evidence, and stop condition. Ask for findings or a candidate result,
-not authority to enlarge the mission. The integrating agent owns assembly,
-whole-result acceptance, and stopping—not semantic judgments inside results.
-Keep one final owner per judgment; component reports cannot replace the whole-result check.
-When stakes justify it, delegate an independent challenge;
-final acceptance remains with the root.
+## Delegate bounded work; integrate once
 
-## Validate the Result and Calibrate the Claim
+Delegate when parallel execution, distinct evidence, specialized capability, or clean context separation improves the result. Give each subagent a bounded outcome, relevant sources, scope, acceptance evidence, and stop condition. Ask for findings or a candidate component, not authority to expand the mission.
 
-Use decisive, proportionate evidence. Start with the most direct practical test
-of the completion claim, then add the corroboration required by the claim's
-breadth, stakes, hard rules, and observed failures. Prefer the artifact,
-behavior, diff, runtime evidence, source support, or real user path that
-directly demonstrates completion. Do not substitute a large indirect test
-suite or new validation machinery for a missing direct proof.
+When assurance matters, independence requires different evidence, an unrevealed oracle, a clean observation boundary, or a materially different failure model. A separate agent reading the same implementation-derived assumptions is not independent merely because it is a new conversation.
 
-When tests are material, derive their failure objective, oracle, observation boundary, method, and execution scope from the real claim rather than from the current implementation alone.
+The integrating agent owns assembly, decisive source checks, producer-side whole-result completion, and stopping. It may resolve cross-component tradeoffs within the accepted contract, but it must not silently rewrite semantic judgments owned elsewhere. Component reports and agent agreement do not replace an integrated check of the real result.
 
-For a declared handoff, public capability, or reader-facing artifact, validate from the receiver side in the actual medium and surrounding context using only the public result, contract, and allowed context. A schema, artifact, readback, internal metric, automated check, or producer test is insufficient when the receiver cannot complete its next action, must reconstruct implementation or meaning, learns irrelevant rejected concepts, must bypass the public boundary, has no current producer, or must change with an internal source, store, or workflow.
+Before steering another active task, refresh its authoritative current state. Intervene only on a concrete observed divergence and only when the message can change the target's next decision or action. If no decision-changing delta exists, remain silent.
 
-Match each claim to its evidence level:
+## Validate the exact claim at its real boundary
 
-- mechanism or unit evidence supports the mechanism tested;
-- representative integration evidence supports the exercised path;
+Start with the most direct practical evidence of the completion claim, then add only the corroboration required by the claim's breadth, stakes, hard rules, semantic impact, and observed failures. Prefer actual artifacts, diffs, runtime behavior, authoritative source support, real user paths, target hosts, or representative use over declarations of progress.
+
+Match the claim to the evidence:
+
+- mechanism or unit evidence supports the mechanism exercised;
+- representative integration evidence supports the path exercised;
 - a bounded natural run supports what happened in that run;
-- aggregate quality, long-term reliability, or population-wide claims require
-  evidence at that scale.
+- receiver evidence supports the receiver state and medium exercised;
+- aggregate quality, later-run convergence, population-wide behavior, or long-term reliability requires evidence at that scale.
 
-One successful sample is not population evidence. Passing tests do not prove an
-unexercised user path. A time-bounded observation task may be complete when its
-agreed window ends, but the time limit does not turn missing evidence into a
-broader quality claim. Report exactly what was and was not demonstrated.
+One successful sample is not population evidence. Passing tests do not prove an unexercised user path. Artifact existence, schema validity, internal metrics, or producer-side readback do not prove that a receiver can act.
 
-A failed check proves that the observed path failed, not automatically that the
-underlying result or implementation is wrong. Before changing course, distinguish
-the result itself, its implementation, the validation method, the environment,
-an external dependency, and stale state. One failure does not by itself justify
-rollback, a declaration of completion, or redesign.
+A failed check establishes that its observed path failed. It does not automatically prove that the underlying result or implementation is wrong, authorize rollback, or prohibit a distinct fresh run. Preserve a failed instance when required; separately determine whether current authority permits another run.
 
-Before an expensive rerun, state what it distinguishes and how either result changes a decision. Otherwise do not rerun.
+Before an expensive rerun or broad suite, state internally what it distinguishes and how either outcome changes the next action. Do not repeat unchanged runs with unchanged preconditions when no decision would change. Preserve hard gates for permissions, privacy, integrity, shared users or data, external cost, contracts, and irreversible effects.
 
-For operational or data-scale work, validate representative production volume,
-time, and resource bounds when the contract depends on them. Interfaces, unit
-tests, plans, and receipts do not by themselves prove natural operation.
+For scheduled, retried, batched, or long-running work, validate the first, second, and later run when the claim depends on convergence. For operational or data-scale work, validate representative volume, time, state, and resource bounds.
 
-Do not mistake any of the following for completion:
+A time-bounded observation task may be complete when its agreed window ends. The elapsed window does not turn absent evidence into a broader quality claim or authorize continued monitoring.
 
-- a plausible plan;
-- a large amount of implementation;
-- passing tests that do not exercise the requested result;
-- supporting infrastructure built before the primary deliverable;
-- a summary of work that has not produced the promised artifact or behavior.
+Report exactly what was and was not demonstrated.
 
-If final acceptance exposes a result-only mismatch while the route still holds, recover the accepted positive baseline and repair one integrated delta rather than layering local prohibitions. If validation instead isolates one owning implementation cause, repair it and test again.
-Reopen the design when the objective, route, ownership, or validation logic no longer remains coherent as a whole.
+## Make the result usable by the receiver
 
-## Stop When Complete
+The production path ends where the intended reader, user, system, or next agent can perform its next required action using only the public result, allowed context, and stable contract. The receiver should not need producer history, private state, rejected alternatives, provider internals, or an explanation of hidden machinery to repair the result.
 
-Stop when all of the following are true:
+Completeness depends on receiver state:
 
-- the requested outcome exists;
-- the applicable constraints and hard rules are satisfied;
-- proportionate evidence supports the completion claim;
-- no required work remains inside the authorized scope.
+- a fresh receiver needs enough orientation and authority to act;
+- an informed receiver usually needs the decision-changing delta and surviving invariant;
+- an off-course receiver needs the observed divergence, correct target state, and reason that changes its next action.
 
-Do not continue with unsolicited cleanup, generalized frameworks, extra modes,
-new platforms, speculative safeguards, or unrelated improvements. A concise
-note about a material adjacent issue is allowed; implementing it is not.
+Validate in the real medium and surrounding environment when sequence, rendering, visual grammar, host, state, timing, playback, attention, or operational context affects meaning.
+
+If the underlying result is sound but selection, explanation, organization, or medium fit is wrong, reconstruct the output from the accepted positive state. Do not rerun accepted upstream work without evidence that it is wrong.
+
+Receiver-side evidence production is part of completion when the claim depends on receiver use. A separate acceptance phase may recheck that result from a changed observation boundary; evidence production and acceptance need not be the same responsibility.
+
+## Stop when complete
+
+Stop when all are true:
+
+- the requested observable outcome exists;
+- applicable constraints and hard rules are satisfied;
+- proportionate evidence supports the exact completion claim;
+- the public contract and actual receiver or use boundary are complete when material;
+- no required work remains inside authorized scope.
 
 Before finishing, ask:
 
-> What can be removed while preserving the requested result's usefulness for
-> its intended reader or use, its hard rules, required behavior, and supporting
-> evidence?
+> What can be removed while preserving the requested result, hard rules, required behavior, public meaning, receiver usability, and supporting evidence?
 
-Remove it. Then deliver the result and stop.
+Remove it, deliver the result, and stop.
 
-## Recognize Scope-Expansion Failure
+Do not continue with unsolicited cleanup, new platforms, speculative safeguards, generalized frameworks, or unrelated improvements.
 
-Reconsider when the result is unfinished while coordination, recovery,
-compatibility, state, infrastructure, or speculative tests keep growing. Do not
-add another coordinator. Return to one path, remove what evidence does not
-require, validate the observable result, and stop.
+Read [references/casebook.md](references/casebook.md) only when learning or revising this method, not during blind evaluation. Read [references/eval-rubric.md](references/eval-rubric.md) when evaluating or changing this skill.

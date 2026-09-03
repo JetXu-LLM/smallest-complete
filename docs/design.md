@@ -1,7 +1,8 @@
 # Design
 
 Smallest Complete is intentionally not an agent framework. It is a small
-instruction system with one core Skill and two conditional references.
+instruction system with one core Skill, two conditional runtime references, and
+two non-runtime evaluation references.
 
 ## The complete mechanism
 
@@ -11,8 +12,10 @@ global AGENTS.md activation
 skills/smallest-complete/SKILL.md
         ├─ only for non-trivial coding or architecture work
         │  references/elegant-architecture.md
-        └─ only when the choice of tests or other validation evidence is material
-           references/evidence-calibrated-testing.md
+        ├─ only when the choice of tests or other validation evidence is material
+        │  references/evidence-calibrated-testing.md
+        └─ only when learning, revising, or evaluating the method
+           references/casebook.md + references/eval-rubric.md
 ```
 
 ### Global activation: remember when it matters
@@ -31,6 +34,8 @@ It does not duplicate the Skill body. Global context stays small.
 - reconstruct the user's current contract;
 - separate direction from present authorization;
 - resolve conflicting binding requirements before building;
+- absorb a local correction by restoring the accepted baseline rather than
+  layering another exception or compatibility path;
 - maintain one current explanation and route through long work;
 - make additions earn their place;
 - repair at an isolated owning boundary or reintegrate when local fixes no longer
@@ -40,6 +45,8 @@ It does not duplicate the Skill body. Global context stays small.
 - validate the observable result;
 - retain root whole-result acceptance without reassigning semantic ownership;
 - calibrate claims to evidence;
+- end a bounded observation at its agreed window without upgrading absent
+  evidence into a broader quality claim;
 - stop when the current job is complete.
 
 This applies to coding, architecture, research, analysis, writing, documents,
@@ -51,9 +58,9 @@ receiver. A fresh receiver may need orientation, an informed receiver may need
 only the decision-changing delta, and a receiver already off course needs the
 observed divergence and correct next state. Final acceptance uses the actual
 channel and surrounding context. A result-only mismatch is reconstructed from
-the accepted positive state; an artifact or implementation change is handed
-back as one integrated repair; the design reopens only when the route,
-ownership, or validation logic is no longer coherent.
+the accepted positive state; an artifact or implementation defect is returned
+to its owner as one integrated repair request; the design reopens only when the
+route, ownership, or validation logic is no longer coherent.
 
 ### Conditional architecture reference: shape code without bloating every task
 
@@ -100,11 +107,21 @@ Long-lived projects may preserve a compact validation map only when repeated
 rediscovery justifies it and the current task authorizes documentation. The
 reference defines no mandatory filename, schema, budget, state, or workflow.
 
+### Non-runtime evaluation references: test the method without training to the cases
+
+[`casebook.md`](../skills/smallest-complete/references/casebook.md) records
+phase-specific failure patterns for learning and revision.
+[`eval-rubric.md`](../skills/smallest-complete/references/eval-rubric.md) defines
+blind comparisons, critical failures, reference-selection checks, and acceptance
+criteria that remain self-contained when the public Skill is installed alone.
+Neither file is loaded during ordinary execution or blind subject runs.
+
 ## Why this structure
 
 The project uses progressive disclosure. The activation paragraph is always
-available, the core Skill loads for qualifying work, and each reference loads
-only when its decisions are material.
+available, the core Skill loads for qualifying work, runtime references load only
+when their decisions are material, and evaluation references load only when the
+method itself is being learned, revised, or tested.
 
 That avoids two symmetric failures:
 
@@ -112,8 +129,9 @@ That avoids two symmetric failures:
 2. Full architecture and testing doctrines in every conversation waste context
    and can distort simple work.
 
-One Skill plus two conditional references keeps the methods available without
-making either a permanent task protocol.
+One Skill plus two conditional runtime references keeps the methods available
+without making either a permanent task protocol. The evaluation files remain
+outside the runtime path.
 
 ## The addition gate
 
