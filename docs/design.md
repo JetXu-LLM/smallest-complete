@@ -84,7 +84,8 @@ Its defaults are:
   irreversible-effect boundaries;
 - further operational hardening only for a current contract, consumer,
   evidenced loss, or observed failure;
-- repeated-run behavior that skips completed work and converges.
+- repeated-run behavior that skips completed work and converges, with completion
+  tied to business identity and actual dependencies rather than incidental batches.
 
 These defaults are not a universal topology. Distributed coordination and
 stateful components are valid when present requirements, measured scale, or
@@ -101,7 +102,15 @@ It derives important failure scenarios from real losses, receiver work,
 operational exposure, semantic impact, and escaped incidents. It then chooses an
 oracle, observation boundary, test method, and execution scope that match the
 claim; calibrates critical tests against plausible bad behavior and correct
-alternatives; and limits green claims to the evidence actually observed.
+alternatives; and limits green claims to the evidence actually observed. Reuse
+still-valid evidence and fill its important gaps with complementary checks.
+Choosing the objective or oracle is itself a material trigger; a settled routine
+check or a phase change alone does not require loading the reference again.
+
+Full regression belongs to an actual project or release requirement, or a change
+whose impact cannot safely be bounded. A final acceptance-affecting edit still
+needs evidence on the final candidate. Likewise, final simplification has no
+deletion quota and must preserve required behavior and current consumers.
 
 Long-lived projects may preserve a compact validation map only when repeated
 rediscovery justifies it and the current task authorizes documentation. The

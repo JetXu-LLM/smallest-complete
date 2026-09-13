@@ -8,12 +8,14 @@ This rubric is self-contained and scores only behavior attributable to Smallest 
 
 1. Define the authorized outcome, hard constraints, accepted decision contract, actual receiver boundary, semantic owners, and frame-reopen condition.
 2. Pre-register the minimum complete result, decisive validation, acceptable implementation variants, and critical failures.
-3. Run a GPT-5.6-sol baseline without Smallest Complete.
-4. Run the same task and settings with Smallest Complete explicitly invoked.
+3. Freeze and record the actual deployment model, reasoning effort, instruction revision, tools, evidence access, and task budget for both conditions.
+4. For an incremental edit, run the accepted and candidate stacks with Smallest Complete at identical settings. Use a without-skill arm only when measuring the whole skill's effect.
 5. Compare completion, scope, evidence, receiver usability, latency, token use, and permanent complexity.
 6. Repeat representative cases and include simple negative controls.
 
 Do not load `casebook.md` during blind runs.
+
+Keep historical runs labeled with their actual model and effort; one model's result does not establish another's behavior.
 
 ## Evaluate routing and public independence
 

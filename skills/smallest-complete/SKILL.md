@@ -44,14 +44,17 @@ When a correction invalidates an agent-added implementation, artifact, or routin
 
 For architecture design, system design, non-trivial coding, refactoring, migration, or debugging that may change structure, ownership, control flow, state, interfaces, public contracts, or operational behavior, read [references/elegant-architecture.md](references/elegant-architecture.md) before planning or editing. A truly local edit may skip it, but still apply the removal question before accepting a new abstraction, state, branch, compatibility path, or coordination mechanism.
 
-Read [references/evidence-calibrated-testing.md](references/evidence-calibrated-testing.md) before choosing, adding, or running evidence when that choice could materially affect acceptance. Explicit triggers include:
+Read [references/evidence-calibrated-testing.md](references/evidence-calibrated-testing.md) when deciding what would make a material completion claim credible, before committing to a test strategy or interpreting its results. Explicit triggers include:
 
+- choosing the important failure to rule out, the oracle, or whether existing checks could detect it;
 - deciding among focused, affected, broad, full, receiver, operational, production-like, or real-run validation;
 - diagnosing a natural or escaped defect after producer-side checks passed;
 - supporting a runtime, host, state, time, repeated-run, scale, or external-effect claim;
 - preserving a failed exact instance while separately deciding whether a distinct fresh run is authorized;
 - determining whether the fixture, oracle, environment, dependency, stale state, or implementation failed; and
 - deciding whether another expensive run would change a decision.
+
+A routine local check with a settled oracle, scope, and authoritative procedure can run directly. Revisit the reference when new evidence makes one of these choices material; do not reload unchanged guidance merely because the phase changed.
 
 Do not read the software architecture reference for ordinary research, writing, slides, spreadsheets, or communication unless the subject itself is software or system architecture. Detailed methods live in their references; do not restate or load them merely because they exist.
 
@@ -178,7 +181,7 @@ Before finishing, ask:
 
 > What can be removed while preserving the requested result, hard rules, required behavior, public meaning, receiver usability, and supporting evidence?
 
-Remove it, deliver the result, and stop.
+Remove only unnecessary task-added or otherwise in-scope material; a deletion is not required. If a final change could affect acceptance, revalidate the affected boundary before delivering, then stop.
 
 Do not continue with unsolicited cleanup, new platforms, speculative safeguards, generalized frameworks, or unrelated improvements.
 

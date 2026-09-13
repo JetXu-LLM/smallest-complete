@@ -179,6 +179,11 @@ restarted from explicit inputs and completed outputs, prefer that over a large
 recovery state machine. If a workflow engine already owns execution state, do
 not mirror that state elsewhere.
 
+Key durable work and completion to stable business identity and the dependencies
+that actually affect it, not incidental batch positions or a changing selection
+roster. A batch, order, or membership change should not restart independent,
+unchanged work; invalidate only what changed facts or rules require.
+
 For every stored field or state transition, identify the present failure,
 requirement, or hard rule that makes it necessary.
 
@@ -285,6 +290,7 @@ Use ordinary language. Make clear:
 - what future evidence would justify adding more.
 
 Use no mandatory report template. Keep the explanation proportional to the
-decision. Before finalizing, try to remove one more concept, state, branch, or
-coordination edge. Keep it removed unless a present requirement demonstrably
-fails.
+decision. Before finalizing, look for an unnecessary in-scope concept, state,
+branch, or coordination edge, without a deletion quota. Preserve required
+behavior and current consumer contracts, and revalidate any affected boundary
+after a final change.

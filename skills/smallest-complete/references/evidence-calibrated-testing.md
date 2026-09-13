@@ -48,7 +48,11 @@ pretend to do the other's job.
 
 ## Build an Evidence Portfolio
 
-For a material use claim, combine only the responsibilities it actually needs:
+For a material use claim, first reuse still-valid evidence and identify the
+important uncertainty it leaves. Choose the smallest complementary set that
+can resolve that uncertainty and protect the affected hard boundaries, not the
+fewest tests or the most familiar suite. Combine only the responsibilities the
+claim actually needs:
 
 1. **Representative route-breaker:** exercise a small real path early enough to show that the host, contract, construct, or receiver route can work—or reject it
    before support machinery grows.
@@ -128,7 +132,7 @@ During implementation, continue through this order only while the change's seman
 2. Run affected owner tests.
 3. Run affected consumer tests when a public boundary changed or may leak.
 4. Run the shortest real route when host, state, timing, or side effects matter.
-5. Run full regression once at a stable merge, release, or production boundary, or earlier when the impact cannot be bounded safely.
+5. Run full regression when a current project or release requirement calls for it, or when relevant changes make the impact unsafe to bound. A milestone alone does not create that requirement.
 
 When the completion claim is that a real workflow operates and current
 authority permits a distinct fresh run with bounded, acceptable consequences,
@@ -146,15 +150,16 @@ dynamic behavior that defeats reliable impact analysis. Also broaden when
 several local changes have accumulated and the current blast radius can no
 longer be explained.
 
-Do not repeat an unchanged full run when the tree, environment, inputs, and
-preconditions are the same and no decision would change. A focused iteration
-does not permanently waive the full stable-boundary gate. A full suite is valid
-evidence for the paths it covers; it is not a substitute for a missing receiver,
-real host, natural input, or later-run observation.
+Reuse existing results only while the relevant code, environment, inputs, and
+preconditions still support the current claim. A phase or milestone change alone
+does not require another run. A focused iteration does not waive an existing
+required gate. A full suite is valid evidence for the paths it covers; it is not
+a substitute for a missing receiver, real host, natural input, or later-run
+observation.
 
 At a stable boundary, run the shortest direct completion, receiver, or operational acceptance on the same final candidate when changes since its last
-run could affect that claim. Full regression corroborates that evidence; it does
-not replace it.
+run could affect that claim. Any required full regression corroborates that
+evidence; it does not replace it.
 
 Test-impact tools may help select existing tests after their dependency model is
 calibrated. Treat their omissions as a measurable risk, especially with dynamic
@@ -173,10 +178,12 @@ Before acting on a failure, distinguish:
 - an external dependency; and
 - stale or contaminated state.
 
-A failed check establishes that its observed path failed. It does not
-automatically authorize rollback, redesign, or another large test cycle. A
-passing check supports only the actor, input, environment, state, time, and
-boundary it actually exercised.
+A failed check establishes what happened on its observed path. A wrapper's
+refusal or a failed lookup does not prove the underlying data or capability is
+unavailable; identify the limiting layer without widening access authority.
+Failure does not automatically authorize rollback, redesign, or another large
+test cycle. A passing check supports only the actor, input, environment, state,
+time, and boundary it actually exercised.
 
 A failure may terminate the observed instance without settling the task's
 claim. Preserve that instance and its evidence when required, then determine

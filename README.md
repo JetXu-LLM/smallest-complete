@@ -84,9 +84,11 @@ For non-trivial test strategy, escaped defects, receiver, operational, or
 real-run claims, or a consequential choice among focused, broad, full, and
 other completion evidence, the Skill reads
 [`evidence-calibrated-testing.md`](skills/smallest-complete/references/evidence-calibrated-testing.md).
-It derives failure scenarios from real losses, receivers, operation, and semantic
-impact; chooses the matching oracle and boundary; and limits every green claim
-to the path actually exercised. Routine local checks do not load the reference.
+It helps choose the important failure and a credible oracle before writing cases,
+then the smallest complementary evidence for the remaining uncertainty. Full
+regression follows current requirements or unsafe-to-bound impact, not phase
+labels. Green claims stay within the path exercised. Routine checks with a
+settled oracle, scope, and authoritative procedure can run directly.
 
 [Read the complete testing guidance →](skills/smallest-complete/references/evidence-calibrated-testing.md)
 

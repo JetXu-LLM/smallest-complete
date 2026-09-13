@@ -83,7 +83,10 @@ For a meaningful comparison:
 
 1. Use the same model, harness version, reasoning effort, repository state,
    tools, permissions, and user request.
-2. Run one condition without Smallest Complete and one with it.
+2. For an incremental revision, compare the accepted and candidate stacks with
+   Smallest Complete. Use a without-skill condition when measuring the whole
+   skill's effect instead. Record the actual deployment model and effort; do not
+   relabel historical runs from another model as current evidence.
 3. Isolate runs so neither sees the other's artifacts or conclusions.
 4. Predefine the acceptance criteria and hard scope boundary before either run.
 5. Score outputs blind when practical.
@@ -141,6 +144,12 @@ The test set should include:
   path must be removed rather than preserved through another exception;
 - bounded observation tasks that should end at the agreed window without turning
   missing evidence into a reliability or population claim.
+- unchanged independent work that should survive a batch membership change,
+  paired with a membership-dependent aggregate that must be recomputed;
+- a failed adapter or lookup that cannot establish underlying absence, paired
+  with an explicit access denial that must not be bypassed;
+- final simplification with nothing unnecessary to delete, and a final edit
+  whose changed receiver behavior invalidates earlier acceptance evidence.
 
 Include negative controls in which a hard boundary must precede value delivery,
 an observed repeated side effect requires idempotency, a current consumer needs
@@ -166,6 +175,12 @@ Also test conditional-reference routing: architecture only, testing only, both,
 and neither. Material operational or real-run evidence must route to the testing
 reference even when it is not called a test; a local check with a settled owner,
 contract, and impact must not load it.
+
+Include pre-test decisions about which failure matters and who defines the
+expected answer. Loading the reference is not evidence that it was applied:
+score the chosen objective, oracle, boundary, evidence reuse, and scope. Preserve
+required full-suite gates while rejecting a new run motivated only by a phase
+label. Keep a settled authoritative local-check control free of this ceremony.
 
 Track both recall and precision. A Skill that triggers on everything becomes
 noise; a Skill that rarely triggers cannot affect behavior.
