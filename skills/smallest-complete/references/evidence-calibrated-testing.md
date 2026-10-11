@@ -114,6 +114,12 @@ Use mocks to isolate an owned boundary, not to erase the dependency that carries
 paths, or public fields created only to make a fixture convenient. Testability should usually follow from a clear real contract; special accommodation belongs
 inside the test harness unless the product itself needs it.
 
+Use existing targeted checks when they answer the question. Permission to run
+checks does not automatically authorize a new test project, persistent harness,
+or production test hook. A necessary regression can belong to an authorized
+implementation; follow any explicit opt-in restriction. Do not turn a fixture's
+convenience or a reviewer's imagined requirement into product behavior.
+
 ## Select Execution by Semantic Impact
 
 Changed line count is not the testing boundary. Trace the behavior instead:
@@ -142,13 +148,14 @@ that cannot answer the claim. Preserve hard gates for permissions, privacy,
 integrity, shared users or data, external cost, contractual limits, and
 irreversible effects; directness never widens authorization.
 
-Broaden validation when the change touches shared core behavior, protocol or
-schema, serialization, authentication, permissions, privacy, public API or ABI,
-state machines, storage or migration, cursor or time semantics, dependencies,
-runtime or build configuration, shared fixtures, test harnesses, oracles, or
-dynamic behavior that defeats reliable impact analysis. Also broaden when
-several local changes have accumulated and the current blast radius can no
-longer be explained.
+Inspect semantic reach carefully for changes to shared core behavior, protocol
+or schema, serialization, authentication, permissions, privacy, public API or
+ABI, state machines, storage, migration, cursor or time semantics, dependencies,
+runtime or build configuration, shared fixtures, test harnesses, oracles, and
+dynamic behavior. These are risk cues, not automatic orders to run every suite.
+Broaden to the affected boundaries; use broader regression when impact cannot
+be safely bounded or accumulated changes make its reach unclear. Preserve any
+applicable project or release requirement.
 
 Reuse existing results only while the relevant code, environment, inputs, and
 preconditions still support the current claim. A phase or milestone change alone
@@ -160,6 +167,12 @@ observation.
 At a stable boundary, run the shortest direct completion, receiver, or operational acceptance on the same final candidate when changes since its last
 run could affect that claim. Any required full regression corroborates that
 evidence; it does not replace it.
+
+Keep that candidate stable while expensive checks run. Do not make unrelated
+cleanup changes that invalidate evidence and trigger another cycle. Recheck
+what a necessary change affects, not every earlier phase by default. There is
+no universal test-count target, mandatory full-suite cadence, or review-round
+quota; the remaining material uncertainty and binding requirements decide.
 
 Test-impact tools may help select existing tests after their dependency model is
 calibrated. Treat their omissions as a measurable risk, especially with dynamic
@@ -184,6 +197,14 @@ unavailable; identify the limiting layer without widening access authority.
 Failure does not automatically authorize rollback, redesign, or another large
 test cycle. A passing check supports only the actor, input, environment, state,
 time, and boundary it actually exercised.
+
+In research, separate semantic or numerical validity, endpoint format, and
+archival or observer status. A strict format may be a real endpoint requirement;
+report that failure without equating it to a different scientific claim or
+repairing answers into correctness. When computation and its necessary evidence
+are intact, repair a reporting defect from saved outputs rather than rerunning
+an expensive or restricted scientific request. Missing necessary evidence still
+limits the claim; do not silently label an uncertain run successful.
 
 A failure may terminate the observed instance without settling the task's
 claim. Preserve that instance and its evidence when required, then determine

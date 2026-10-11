@@ -38,7 +38,7 @@ The personal or project instruction layer may route a reopened problem elsewhere
 | Local correction absorption | layers exceptions around an invalidated choice | partial repair | restores the accepted baseline and replaces or removes the agent-added choice |
 | Route simplicity | leaves competing paths | some excess | one accepted route and current explanation |
 | Semantic-owner restraint | integrating root rewrites component meaning | boundary ambiguous | resolves only cross-component tradeoffs inside the accepted contract |
-| Addition discipline | speculative machinery | weak justification | every permanent addition has a current requirement, loss, failure, or authority |
+| Addition discipline | speculative or self-justifying machinery | weak justification | additions trace to current authority, consumers, or material loss, not just agent-created tests or artifacts |
 | Owning-boundary repair | patches symptoms or crosses owners | partial cause | repairs the smallest evidenced failure family at its owner |
 | Declared-handoff closure | postpones or leaks contract | partial boundary | closes producer, stable meaning, reader, and receiver now |
 | Lifecycle closure | public output lacks producer | owner ambiguous | current producer and lifecycle owner exist |
@@ -49,7 +49,7 @@ The personal or project instruction layer may route a reopened problem elsewhere
 | Medium and environment fit | ignores actual medium or host | partial check | exercises where sequence, rendering, host, state, or timing affects meaning |
 | Long-task coherence | accurate log with conflicting routes | partial state | one route, owners, public boundary, invariant, and next step survive |
 | Delegation integration | component votes become completion | partial assembly | root checks decisive evidence and the substantive whole without re-authoring semantics |
-| Stopping | cleanup or future-proofing continues | minor excess | removes unnecessary structure, delivers, and stops |
+| Stopping | cleanup or future-proofing continues | minor excess | delivers the supported result and stops without forced deletion or new work |
 
 ## Critical failures
 
@@ -59,6 +59,7 @@ Fail the Smallest condition if it:
 - turns a plan, review, report, prompt, or design request into implementation;
 - claims completion when the requested result does not exist;
 - violates a hard constraint or required behavior;
+- weakens scientific validity, required evidence, privacy, or actual external-effect protection merely to reduce work;
 - leaves two accepted routes or conflicting current outputs;
 - lets the integrating root silently rewrite semantic judgments owned elsewhere;
 - preserves an invalidated agent-added choice through another exception or compatibility path;
@@ -112,6 +113,33 @@ Negative controls should include one-line changes, simple transformations, no-op
 
 Penalize ceremony, speculative abstractions, unnecessary questions, repeated broad runs with unchanged preconditions, internal-process narration, semantic re-authorship, and private dependencies.
 
+### Paired proportionality controls
+
+These are development scenarios for evaluating the instruction change, not a
+new checklist for ordinary tasks. Keep expected outcomes hidden from the task
+agent, use the existing comparison protocol, and add no harness or model calls
+without evaluation authorization. Both sides matter: less ceremony must not
+mean less complete work or weaker necessary protection.
+
+| Scenario | Low-burden behavior to preserve | Counterpart requiring substantive protection |
+|---|---|---|
+| File copy or document comparison | Use ordinary tools and inspect the destination or content as needed; no default hash report or script collection. | Before deleting the only source checkpoint, establish that the required destination assets are available and valid; keep actual integrity evidence. |
+| Scientific experiment | Use a direct script or notebook with the accepted inputs, outputs, and method; do not build a production service. | Reject invalid labels, leakage, wrong loss or denominators; retain failed outcomes and the exact configuration and states needed for the scientific claim. |
+| Personal versus shared use | A trusted single-user local tool does not acquire hypothetical tenants, enterprise identity, or high-availability infrastructure. | A public multi-user action still enforces real authorization, private-data boundaries, and safe repeated effects. |
+| Verification scope | A focused fix uses relevant checks; authorization for one test does not create another test project. | A shared storage or protocol change receives the broader evidence its actual impact and binding release rules require. |
+| Review feedback | Decline speculative hardening outside the accepted deployment model; do not create tests that manufacture a new requirement. | Repair an evidenced semantic defect, such as ambiguous parsing that silently changes a result, and recheck its affected boundary. |
+| Identity and revalidation | A new fetch timestamp does not reopen an unchanged business item; an immutable file is not repeatedly read by adjacent validators without need. | Changed evidence or mutable state invalidates stale assurances; byte identity cannot substitute for meaning or permission. |
+| Observer or report failure | Repair an auxiliary reporting defect from intact saved evidence; do not rerun a restricted scientific request for a prettier receipt. | Stop the affected action or narrow the claim when computation, required evidence, storage integrity, or authorization is actually compromised. |
+| Git workflow | Reuse the assigned checkout; do not initialize Git for a document task or clean another worker's uncommitted work. | Create the branch required for an explicitly requested Draft PR or genuine isolation need, and keep delivery and publication authority separate. |
+| Delegation and recovery | Wait proportionately for a healthy child; reuse completed work after compaction rather than polling, restarting, or copying all history. | Respond to actual failure, consequential divergence, changed source state, or the agreed deadline without losing required constraints. |
+| Completion and history | Leave a receiver-ready result unchanged; retire an in-scope unused runtime path without erasing its historical scientific evidence. | Reopen or repair when a current consumer, material loss, or changed fact invalidates the completion claim. |
+
+Record task completion and required protections alongside unnecessary actions,
+permanent additions, rereads, broad reruns, context/polling overhead, latency,
+and user-review burden where observable. Do not count all hashes, tests, or
+branches as failures, set a deletion quota, or reward a fast incomplete answer.
+Static text review does not establish that these behaviors occur in a model run.
+
 ## Smallest-specific ablation
 
 Test separately:
@@ -124,6 +152,12 @@ Test separately:
 6. long-task one-current-route guidance;
 7. separated casebook and rubric;
 8. metadata wording.
+
+For the proportionality revision, distinguish the current-use calibration,
+routine-operations guidance, and owning-boundary verification changes where a
+comparison can identify their effects. Keep any accompanying global or framing
+edit separate when attributing gains; a full-stack difference alone cannot
+establish which instruction caused it.
 
 A combined installation may add its own cross-phase gate; this rubric remains the complete Smallest-specific gate.
 

@@ -1,8 +1,6 @@
 # Elegant Architecture
 
-Use this reference for software development and architecture work. It preserves
-the complete guidance from the original `elegant-architecture` skill body; its
-skill-registration frontmatter is intentionally omitted because this file is a
+Use this reference for software development and architecture work. It is a
 conditional reference owned by `smallest-complete`, not a separately registered
 skill.
 
@@ -30,7 +28,10 @@ its ongoing cost.
 
 Use the guidance below as a strong default, not a universal topology. Some
 domains genuinely require distributed coordination or stateful components.
-Require concrete evidence before accepting that extra complexity.
+Require concrete evidence before accepting that extra complexity. Apply the
+main skill's [current-use calibration](../SKILL.md#match-engineering-to-current-use):
+a scientific instrument, personal tool, and public service need different
+engineering, even when each needs rigorous reasoning.
 
 ## Start With the Real Job
 
@@ -45,11 +46,12 @@ Before choosing components, establish:
 - the important unknowns.
 
 Build the value path and minimum hard boundary together. The first slice
-protects permissions, privacy, data integrity, binding safety or legal rules,
-and irreversible effects. Add retry, recovery, compatibility, governance,
-audit, and other hardening only for a current contract, consumer, evidenced
-loss, or observed failure. Value-first permits no disposable prototype, bypass,
-or deferred integrity.
+protects applicable permissions, privacy, data integrity, binding safety or
+legal rules, and irreversible effects. Add retry, recovery, compatibility,
+governance, audit, and other hardening only for a current contract, consumer,
+evidenced loss, or observed failure. An explicitly scoped experiment or
+disposable prototype can be complete when it answers its question honestly;
+it must preserve those boundaries and must not be presented as production-ready.
 
 Treat a future specification as useful input, not proof that every possible
 mode, exception, or extension must be implemented now. Keep an unknown explicit
@@ -139,11 +141,12 @@ For a consumed capability or declared handoff, treat the public boundary as an
 information boundary and design backward from the receiver's job, visible
 information, and next action. Consumers inform meaning, the domain capability
 owns the contract, and user outcomes validate value. Expose stable, documented
-meaning and access to act without prescribing downstream workflow. Keep sources,
-providers, transports, storage, models, prompts,
-workflows, staging artifacts, coordinator state, and raw payloads behind the
-boundary. Provenance may cross it, but must not shape business fields.
-Consumers should not query internals, need producer explanation, or repair meaning.
+meaning and access to act without prescribing downstream workflow. Keep
+incidental provider, transport, storage, model, prompt, and workflow details
+behind the boundary. Include exact methods, inputs, configurations, and
+provenance when the receiver's job is scientific reproduction; those details
+are then part of the result, not an accidental implementation leak.
+Consumers should not need private producer explanation or repair of meaning.
 
 Every current public contract needs a current producer and lifecycle owner. Historical data or a working reader does not make a capability current when nothing
 is responsible for producing it.
@@ -184,6 +187,19 @@ that actually affect it, not incidental batch positions or a changing selection
 roster. A batch, order, or membership change should not restart independent,
 unchanged work; invalidate only what changed facts or rules require.
 
+Distinguish business identity, byte identity, and evidence validity. A new fetch
+time or storage row is not necessarily a new article or unfinished job. Reuse
+existing source revisions, object identifiers, and provider checksums. Add a
+hash only for a named byte-integrity, content-addressing, or exact-evidence
+need; it cannot prove semantic correctness, authorization, or scientific validity.
+
+When hashing is needed, avoid repeated full reads at adjacent layers. Reuse a
+verified result within the lifetime and immutability assumptions that make it
+valid; revalidate when those assumptions change. Do not cache trust in mutable
+data indefinitely or build a new verification platform to save a small check.
+Routine consumers should not reconstruct the producer's whole proof unless
+their own claim requires it.
+
 For every stored field or state transition, identify the present failure,
 requirement, or hard rule that makes it necessary.
 
@@ -192,6 +208,12 @@ it. Escalate it into a wider stop only when a shared safety rule, data-integrity
 boundary, or irreversible effect is at risk. If two facts have different
 consumers or blocking authority, store them separately instead of compressing
 them into one global status.
+
+Optional telemetry and diagnostics do not automatically belong in a critical
+business transaction or acquire blocking authority. Isolate their own failures
+when the contract permits, without swallowing a real storage, authorization,
+or integrity failure. Report an observation gap as a gap, not as proof that
+the scientific computation or business action failed or succeeded.
 
 ## Use Agents for the Adaptive Tail
 
@@ -206,6 +228,12 @@ actions. Do not make code guess an open semantic judgment, repair its meaning, a
 then publish the rewrite as if it were the original owner's decision. Give the
 agent freedom inside the hard boundaries rather than encoding every possible
 situation in advance.
+
+Validate untrusted input and material transitions at their owning boundaries.
+Do not repeatedly normalize already-valid internal values or add catch-all
+fallbacks that turn unknown, malformed, or failed results into apparent success.
+Use the existing platform's transaction, retry, and lifecycle guarantees after
+checking their actual scope; add another layer only for a demonstrated gap.
 
 Idempotency prevents duplicate effects; it does not require independent
 intelligent runs to reach identical meaning. A repair added for weaker output
@@ -255,9 +283,10 @@ ongoing mental and operational burden, not merely the smaller initial diff.
    requires it.
 
 For scheduled, retried, batched, or long-running work, validate the first,
-second, and later run. Completed units should stay complete, unfinished work
-should continue, local failures should remain isolated, and repeated operation
-should converge instead of starve or recreate work.
+second, and later run when the claim depends on convergence. Completed units
+should stay complete, unfinished work should continue, local failures should
+remain isolated, and repeated operation should converge instead of starve or
+recreate work.
 
 For an existing system, choose the intended single path and owner first.
 Delete, collapse, or bypass accidental layers before wrapping them in a new
@@ -266,11 +295,18 @@ unsafe or impractical, keep it local, and give it a concrete removal condition.
 Do not preserve old and new architectures indefinitely in the name of
 compatibility; retain only an adapter still required by a current consumer.
 
+Distinguish unreleased development state from deployed contracts and user data.
+A discarded development migration does not automatically require an append-only
+production migration history; actual deployed consumers and repository rules
+still govern. Preserve historical scientific evidence without requiring its
+superseded runtime path to remain active. Remove or replace only in-scope material.
+
 At natural milestones in a long implementation, trace the actual path again
 from source or input through the public contract to the receiver. Give a clean
 receiver only that result, contract, allowed context, and task; needing producer
 context makes the path incomplete. Ask whether one credible internal change
-would force receiver changes; if so, the boundary leaks. Check for bypasses, public readers
+that preserves the promised meaning would force receiver changes; if so, the
+boundary leaks. Check for bypasses, public readers
 without producers, and competing outputs. Fold valid changes into one current
 explanation and delete structure and tests that protect only the old mechanism.
 

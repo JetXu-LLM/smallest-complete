@@ -61,8 +61,9 @@ At minimum, score both sides of the objective.
   consumers, and real journeys rather than changed lines or test count?
 - For scheduled or retried work, did second and later runs skip terminal work,
   continue unfinished work, isolate local waits, and converge?
-- When a provider, store, or internal workflow changed, did the declared public
-  contract remain usable without receiver changes?
+- When a provider, store, or internal workflow changed without changing the
+  promised meaning, did the declared public contract remain usable without
+  receiver changes?
 - Did producer-side evidence improve while receiver action or user value stayed
   flat? If so, did the agent reopen the route instead of adding support layers?
 
@@ -159,6 +160,16 @@ candidate genuinely requires full regression, or a real run would expose shared
 users, data, money, privacy, contractual limits, or irreversible effects. These
 distinguish receiver and testing discipline from schema ceremony, speculative
 empathy, ritual distrust, and indiscriminate avoidance of broad validation.
+
+The rubric also defines paired engineering-proportionality controls. Contrast
+an ordinary copy with sole-copy recovery, bounded scientific delivery with
+invalid measurements, incidental internals with required reproduction metadata,
+and optional diagnostic failure with missing required evidence. Pair focused
+validation with an actual full-release gate, healthy waiting with concrete
+failure, and speculative reviewer advice with an in-scope defect. Score the
+observable choice, not a declaration that the agent is being proportionate.
+These are development controls, not a validated benchmark or evidence of lower
+cost, higher quality, or durable improvement.
 
 ## Activation evaluation
 

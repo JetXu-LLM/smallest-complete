@@ -102,6 +102,12 @@ settled oracle, scope, and authoritative procedure can run directly.
 | **Proven** | Completion claims match observable evidence. |
 | **Stop** | Useful discoveries do not silently become new work. |
 
+Match engineering to actual use. A bounded experiment may finish as a notebook;
+a personal tool need not acquire service infrastructure. Scientific validity,
+current consumers, sensitive data, and irreversible effects still require their
+own guarantees. Additional machinery and checks must address a real requirement
+or uncertainty, not merely an agent's earlier suggestion.
+
 ## In practice
 
 | You ask | Smallest Complete response |
@@ -111,8 +117,9 @@ settled oracle, scope, and authoritative procedure can run directly.
 | “Turn these notes into five slides.” | Research what the deck needs, deliver five strong slides, stop. No brand system. |
 
 For research, writing, analysis, and other ChatGPT Work tasks, inquiry stays as
-broad as the requested result needs. The boundary applies to deliverables and
-actions—not to useful thinking.
+broad as the requested result needs. Scope limits deliverables and actions, not
+useful thinking; inquiry and validation still earn their cost by improving the
+result or resolving material uncertainty.
 
 ## Deliberately small
 

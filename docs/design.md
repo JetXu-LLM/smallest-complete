@@ -53,6 +53,13 @@ This applies to coding, architecture, research, analysis, writing, documents,
 presentations, and operations. It deliberately does not force software
 architecture language onto ordinary knowledge work.
 
+Engineering follows the component's present use, not a universal production
+standard. A bounded experiment, personal tool, and shared product can need
+different delivery structures. Scientific validity and real safety constraints
+remain strict; a test, reviewer, or draft does not create a new requirement.
+Routine file operations use existing tools and destinations unless isolation,
+integrity, or another current requirement calls for more.
+
 For a handoff or reader-facing artifact, completeness is relative to the current
 receiver. A fresh receiver may need orientation, an informed receiver may need
 only the decision-changing delta, and a receiver already off course needs the
@@ -112,6 +119,11 @@ whose impact cannot safely be bounded. A final acceptance-affecting edit still
 needs evidence on the final candidate. Likewise, final simplification has no
 deletion quota and must preserve required behavior and current consumers.
 
+Sensitive change categories are risk cues, not automatic full-suite mandates.
+Freeze the final candidate during expensive checks and recheck evidence affected
+by later edits. An optional chart or diagnostic failure does not erase intact
+required results; missing required evidence still limits the completion claim.
+
 Long-lived projects may preserve a compact validation map only when repeated
 rediscovery justifies it and the current task authorizes documentation. The
 reference defines no mandatory filename, schema, budget, state, or workflow.
@@ -163,9 +175,14 @@ For a declared handoff, the public contract is also an information boundary.
 Design it backward from the receiver's job, visible facts, and next action.
 Consumers inform the business meaning, the domain capability owns it, and the
 user's real outcome validates it. A clean receiver should be able to act without
-producer internals, semantic repair, or a private explanation. This does not
-justify one universal schema: different business facts may have different
-contracts, and internal helpers need none.
+incidental producer internals, semantic repair, or a private explanation. A
+scientific receiver may legitimately need the exact method, model, inputs, and
+configuration. Only internal substitutions that preserve the promised meaning
+should remain transparent. This does not justify one universal schema:
+different business facts may have different contracts, and internal helpers
+need none. Likewise, business identity, exact byte identity, and evidence
+validity are distinct: use an existing revision or checksum when it establishes
+the needed guarantee, rather than adding repeated hashing or identity layers.
 
 ## Why there is no runtime
 

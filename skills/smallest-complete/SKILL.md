@@ -5,7 +5,7 @@ description: "Complete non-trivial work once its objective, authorization, decis
 
 # Smallest Complete
 
-Deliver the smallest result that fully completes the user's current job. “Smallest” does not mean a partial prototype, the fewest changed lines, or the quickest plausible output. It constrains what becomes permanent or delivered, not the inquiry and validation needed to make the result real.
+Deliver the smallest result that fully completes the user's current job. “Smallest” does not mean a partial prototype, the fewest changed lines, or the quickest plausible output. It constrains permanent structure and total delivery burden. Inquiry and validation earn their cost by improving the requested result or resolving material uncertainty; neither is exempt from proportionality.
 
 The requested observable outcome—not implementation volume, test count, elapsed time, or producer effort—is the unit of completion.
 
@@ -32,11 +32,23 @@ For long work, maintain one compact current explanation of the route, owners, pu
 
 Do not create a formal specification for a simple task. Ask only when a consequential ambiguity cannot be resolved from existing context, authoritative evidence, or a safe reversible probe.
 
+## Match engineering to current use
+
+Infer the engineering burden from actual users, deployment, data, effects, and recovery needs. Use available context, not a mandatory questionnaire or tier declaration. Apply this per component when a repository mixes uses.
+
+- **Research and experiments:** prioritize the scientific question, valid computation, independent-enough measurements, information boundaries, and interpretable results. A direct script, notebook, or disposable prototype may be the complete deliverable. Preserve the inputs, configuration, relevant model states, raw outcomes, failures, and reproduction evidence the claim or accepted protocol needs; do not require a service architecture, generalized recovery engine, or custom provenance system before an experiment can run.
+- **Personal, single-user tools:** prefer a clear working path, ordinary local state, existing libraries, and recoverable changes. Do not add multi-tenant isolation, enterprise identity, high availability, compatibility layers, or generic frameworks for hypothetical users. Personal use can still require strong financial, data, or external-action correctness.
+- **Shared or customer-facing products:** deliver the real user path together with the authentication, authorization, privacy, input validation, safe repeated effects, and recovery justified by actual exposure and current commitments. Reuse platform guarantees where they apply. Production use is not a reason to implement every possible hardening measure.
+
+These are contextual defaults, not runtime modes. Authorization, credentials, private data, external costs, and destructive actions remain protected in every setting. Scientific rigor is not optional, and simpler engineering does not waive an explicit project requirement. Reassess when exposure or commitments change; a possible future launch alone does not require all future infrastructure now.
+
 ## Resolve conflicting requirements before building
 
 Use the most recent explicit user decisions, applicable safety or legal rules, and authoritative sources as binding constraints. Treat derived metrics, examples, samples, checklists, and prior plans as aids unless the user made them requirements.
 
 Do not let a lower-level gate silently redefine the job. If current binding requirements materially conflict, expose and resolve the conflict before costly implementation, broad validation, or irreversible action. Apply stop, retry, exact-once, and fail-closed rules only to the actor, operation identity, state, time, and loss they govern; do not widen permission or prohibition by analogy.
+
+A reviewer suggestion, agent-written test, draft plan, or existing helper does not create its own authority. Trace a proposed obligation to the current user or domain contract, actual consumer, or material loss. Repair an in-scope defect; do not turn speculative review feedback into a new acceptance criterion. A temporary-file location rule is not permission to create an unrelated harness.
 
 When a correction invalidates an agent-added implementation, artifact, or routing choice while the accepted contract remains coherent, recover the last accepted positive baseline and replace or remove that choice. Do not preserve it by layering another prohibition, exception, adapter, or compatibility path.
 
@@ -62,7 +74,7 @@ Do not read the software architecture reference for ordinary research, writing, 
 
 Trace the shortest credible path from available inputs to the requested observable result. Reuse capabilities already provided by the repository, environment, platform, tools, operators, or agent. Prefer a reversible experiment over permanent machinery when it can cheaply resolve a material unknown.
 
-“One route” means one accepted semantic owner and production path for the completed result. It does not prohibit parallel, reversible experiments or independent evidence gathering used to choose that route. Do not leave competing accepted meanings, control paths, outputs, or architectures in the final state.
+“One route” means one accepted semantic owner and delivery path for the completed result. It does not prohibit parallel, reversible experiments or independent evidence gathering used to choose that route. Do not leave competing accepted meanings, control paths, outputs, or architectures in the final state.
 
 Keep each durable fact and semantic judgment under one final owner. Other components or agents may provide evidence, enforce hard rules, reject invalid output, or request revision, but they must not silently reinterpret the same judgment. If several writers are unavoidable, define the merge rule and owner of the merged result.
 
@@ -72,14 +84,14 @@ Use a narrow representative end-to-end path early when it can reject the host, c
 
 When the current work promises a handoff, public output, reusable artifact, or capability, its smallest stable contract is part of completion now—even if downstream implementation does not yet exist.
 
-Define only the business meaning and access the current producer can reliably own. Do not expose provider fields, source tables, storage paths, model details, workflow state, coordinator internals, or future receiver logic as public meaning.
+Define only the meaning and access the current producer can reliably own. Keep provider fields, storage paths, model details, and workflow internals behind the boundary unless the receiver's actual job requires them, as in reproducing a scientific result. Do not turn incidental internals or imagined future receiver logic into public requirements.
 
 Every current public contract needs:
 
 - a current producer;
 - a lifecycle owner;
 - enough documented meaning and access for the receiver to act;
-- an invariant that survives ordinary provider, store, model, transport, or internal workflow changes.
+- an invariant that survives ordinary provider, store, model, transport, or internal workflow changes that do not change the promised meaning.
 
 A working historical reader or artifact does not make a capability current when nothing remains responsible for producing it.
 
@@ -94,11 +106,11 @@ A proposed addition to the deliverable, implementation, workflow, state, abstrac
 
 For research, analysis, writing, and creative artifacts, useful inquiry or craft may also earn its place when it materially improves the requested artifact without changing its purpose, audience, format, or external-action boundary.
 
-Do not promote an adjacent concern by calling it robustness, completeness, production readiness, governance, or future-proofing. Record a material adjacent finding briefly when useful; do not implement it.
+Do not promote an adjacent concern by calling it robustness, completeness, production readiness, governance, or future-proofing. Record a material adjacent finding briefly when useful; do not implement it. Include the addition's future testing, configuration, recovery, context, and user-review burden in the decision; a cheap initial implementation can create expensive obligations.
 
 ## Execute and repair at the owning boundary
 
-Use agent judgment for ambiguous, low-frequency, context-dependent, and reversible cases. Use deterministic protections for permissions, privacy, data integrity, mechanically checkable hard rules, idempotency around repeated effects, and irreversible external actions.
+Use agent judgment for ambiguous, low-frequency, context-dependent, and reversible cases. Use deterministic protections for permissions, privacy, data integrity, mechanically checkable hard rules, idempotency around repeated effects, and irreversible external actions at the boundaries that require them.
 
 Do not encode every imagined exception. Promote an adaptation into permanent machinery only when a current contract, observed repetition, measured scale, required consistency, or material risk justifies its ongoing cost.
 
@@ -117,13 +129,23 @@ Stop local patching when repairs cross owners, old and new routes coexist, suppo
 
 Before replacing or simplifying an existing path, inspect authoritative sources and representative outputs to identify required behavior and public contracts. Preserve consumer meaning and access, not accidental provider, storage, workflow, or topology details.
 
+## Keep routine operations routine
+
+Use native file, editing, search, and version-control tools before inventing wrappers. An ordinary copy, rename, draft comparison, or document edit does not normally need a manifest, hashing pass, script collection, or new project. Check the actual destination and usability as the task warrants. Use a digest when a real consumer needs byte identity or integrity, not as a substitute for reading or understanding the content.
+
+Reuse the assigned checkout and branch. Create or switch a Git branch or worktree only for the requested delivery workflow, an applicable host/repository rule, or a concrete isolation need. Do not initialize Git for a non-Git task or treat another worker's uncommitted files as abandoned. Use existing recovery facilities; add a backup for an actual loss risk, especially before irreversible removal of a sole copy, not before every harmless action.
+
+Keep temporary diagnostics local to the question they answer. Reuse one compact working record rather than generating per-step plans, receipts, and status files. After interruption, recover completed work and the next unresolved step instead of restarting reconnaissance. Once an unchanged tool or environment failure is understood, use an authorized alternative or report the specific blocker; do not keep rebuilding the same failed probe.
+
 ## Delegate bounded work; integrate once
 
-Delegate when parallel execution, distinct evidence, specialized capability, or clean context separation improves the result. Give each subagent a bounded outcome, relevant sources, scope, acceptance evidence, and stop condition. Ask for findings or a candidate component, not authority to expand the mission.
+Delegate when parallel execution, distinct evidence, specialized capability, or clean context separation improves the result enough to justify coordination and inherited-context cost. Give each subagent a bounded outcome, relevant sources, scope, acceptance evidence, and stop condition. Ask for findings or a candidate component, not authority to expand the mission.
 
 When assurance matters, independence requires different evidence, an unrevealed oracle, a clean observation boundary, or a materially different failure model. A separate agent reading the same implementation-derived assumptions is not independent merely because it is a new conversation.
 
 The integrating agent owns assembly, decisive source checks, producer-side whole-result completion, and stopping. It may resolve cross-component tradeoffs within the accepted contract, but it must not silently rewrite semantic judgments owned elsewhere. Component reports and agent agreement do not replace an integrated check of the real result.
+
+Use the supported completion/wait mechanism, with waits matched to expected duration and the remaining deadline. Do not repeatedly poll, send no-change messages, cancel a healthy slow child, or redo its assigned work merely to stay busy. Change course for evidence of failure, a consequential divergence, or the actual task limit; preserve completed results when doing so.
 
 Before steering another active task, refresh its authoritative current state. Intervene only on a concrete observed divergence and only when the message can change the target's next decision or action. If no decision-changing delta exists, remain silent.
 
@@ -153,7 +175,7 @@ Report exactly what was and was not demonstrated.
 
 ## Make the result usable by the receiver
 
-The production path ends where the intended reader, user, system, or next agent can perform its next required action using only the public result, allowed context, and stable contract. The receiver should not need producer history, private state, rejected alternatives, provider internals, or an explanation of hidden machinery to repair the result.
+The delivery path ends where the intended reader, user, system, or next agent can perform its next required action using only the public result, allowed context, and stable contract. The receiver should not need producer history, private state, rejected alternatives, provider internals, or an explanation of hidden machinery to repair the result.
 
 Completeness depends on receiver state:
 
@@ -166,6 +188,8 @@ Validate in the real medium and surrounding environment when sequence, rendering
 If the underlying result is sound but selection, explanation, organization, or medium fit is wrong, reconstruct the output from the accepted positive state. Do not rerun accepted upstream work without evidence that it is wrong.
 
 Receiver-side evidence production is part of completion when the claim depends on receiver use. A separate acceptance phase may recheck that result from a changed observation boundary; evidence production and acceptance need not be the same responsibility.
+
+Lead the handoff with the usable result, decisive evidence, and material limits. Keep routine hashes and process narration out of ordinary summaries unless the receiver needs them. A status message without a meaningful change is not progress.
 
 ## Stop when complete
 
