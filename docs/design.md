@@ -60,6 +60,16 @@ remain strict; a test, reviewer, or draft does not create a new requirement.
 Routine file operations use existing tools and destinations unless isolation,
 integrity, or another current requirement calls for more.
 
+Working records distinguish binding requirements, proposals, and superseded
+decisions so that recovery does not promote an agent's suggestion into a rule.
+Review findings can establish a defect or call for investigation; their label
+or repetition alone does not create a new obligation. Continue separable work
+only when it does not consume invalid evidence or share the unresolved risk.
+
+For substantial text, an available writing skill may help expression within
+execution. Accepted domain decisions and valid checks remain in force. The
+public package requires no companion: its own receiver guidance is the fallback.
+
 For a handoff or reader-facing artifact, completeness is relative to the current
 receiver. A fresh receiver may need orientation, an informed receiver may need
 only the decision-changing delta, and a receiver already off course needs the

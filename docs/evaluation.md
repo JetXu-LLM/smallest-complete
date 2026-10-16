@@ -171,6 +171,12 @@ observable choice, not a declaration that the agent is being proportionate.
 These are development controls, not a validated benchmark or evidence of lower
 cost, higher quality, or durable improvement.
 
+Also contrast recovered optional notes with an explicit owner gate, repeated
+unsupported advice with an unresolved evidenced defect, and independent work
+with work consuming invalid evidence. Test a substantial handoff with and
+without an optional writing aid. A requested small correction still belongs to
+completion; avoiding unnecessary review does not waive it or release approval.
+
 ## Activation evaluation
 
 The Skill name and description are initially visible to the model; the body loads

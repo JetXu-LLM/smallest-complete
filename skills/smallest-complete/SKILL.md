@@ -28,7 +28,7 @@ A requested plan, review, report, prompt, design, or handoff is the deliverable.
 
 After compaction, interruption, handoff, or resume, reconstruct the current contract from the conversation, durable task state, authoritative sources, and repository or artifact state. Do not revive a stale plan merely because it remains available.
 
-For long work, maintain one compact current explanation of the route, owners, public boundary, and invariant that must survive change, together with validation status and the next step. A factually current log is insufficient if it preserves two incompatible semantic routes.
+For long work, maintain one compact current explanation of the route, owners, public boundary, and invariant that must survive change, together with validation status and the next step. A factually current log is insufficient if it preserves two incompatible semantic routes. In that record, distinguish binding requirements from proposed checks and superseded decisions. Recover their authority, not just their wording; an agent-added suggestion does not become mandatory through repetition or compaction.
 
 Do not create a formal specification for a simple task. Ask only when a consequential ambiguity cannot be resolved from existing context, authoritative evidence, or a safe reversible probe.
 
@@ -48,7 +48,7 @@ Use the most recent explicit user decisions, applicable safety or legal rules, a
 
 Do not let a lower-level gate silently redefine the job. If current binding requirements materially conflict, expose and resolve the conflict before costly implementation, broad validation, or irreversible action. Apply stop, retry, exact-once, and fail-closed rules only to the actor, operation identity, state, time, and loss they govern; do not widen permission or prohibition by analogy.
 
-A reviewer suggestion, agent-written test, draft plan, or existing helper does not create its own authority. Trace a proposed obligation to the current user or domain contract, actual consumer, or material loss. Repair an in-scope defect; do not turn speculative review feedback into a new acceptance criterion. A temporary-file location rule is not permission to create an unrelated harness.
+A reviewer suggestion, agent-written test, draft plan, or existing helper does not create its own authority. Before changing the plan, connect a finding to the accepted contract, actual consumer, or credible material loss. Repair established defects, investigate decision-changing uncertainty, and decline unsupported expansion within delegated authority. Do not repeat review solely to obtain unanimity; keep applicable approval gates and return a newly unsafe or incoherent route to framing. A temporary-file location rule is not permission to create an unrelated harness.
 
 When a correction invalidates an agent-added implementation, artifact, or routing choice while the accepted contract remains coherent, recover the last accepted positive baseline and replace or remove that choice. Do not preserve it by layering another prohibition, exception, adapter, or compatibility path.
 
@@ -68,7 +68,7 @@ Read [references/evidence-calibrated-testing.md](references/evidence-calibrated-
 
 A routine local check with a settled oracle, scope, and authoritative procedure can run directly. Revisit the reference when new evidence makes one of these choices material; do not reload unchanged guidance merely because the phase changed.
 
-Do not read the software architecture reference for ordinary research, writing, slides, spreadsheets, or communication unless the subject itself is software or system architecture. Detailed methods live in their references; do not restate or load them merely because they exist.
+Do not read the software architecture reference for ordinary research, writing, slides, spreadsheets, or communication unless the subject itself is software or system architecture. Detailed methods live in their references; do not restate or load them merely because they exist. When substantial text or a reader-fit defect needs attention, use an available writing skill appropriate to that text. Keep accepted domain decisions and reuse validation already obtained; this is an expression aid within execution, not another mandatory review stage. If none is available, apply the receiver guidance below and continue.
 
 ## Choose one accepted real route
 
@@ -123,7 +123,7 @@ When a failure occurs, distinguish:
 - an external dependency; and
 - stale or contaminated state.
 
-Repair narrowly when evidence isolates one owner and the objective, route, public boundary, and responsibility boundaries still hold. Fix the smallest evidenced failure family rather than only the observed specimen, but do not turn the repair into a general framework without need.
+Repair narrowly when evidence isolates one owner and the objective, route, public boundary, and responsibility boundaries still hold. Identify what the failure invalidates and which actions actually depend on it. Continue separable authorized work only when it does not consume invalid evidence or share the unresolved risk; if the reach is unclear, investigate or pause more broadly. A provisional conclusion and a blocked operation are different states. Fix the smallest evidenced failure family rather than only the observed specimen, but do not turn the repair into a general framework without need.
 
 Stop local patching when repairs cross owners, old and new routes coexist, support structure grows while receiver action or user value remains flat, or the whole path can no longer be explained in one pass. Stop convergence and reopen the problem at the highest invalidated level when the objective, governing mechanism, owner, route, evidence model, public contract, or tradeoff is no longer coherent. Execution difficulty alone is not sufficient.
 
@@ -131,7 +131,7 @@ Before replacing or simplifying an existing path, inspect authoritative sources 
 
 ## Keep routine operations routine
 
-Use native file, editing, search, and version-control tools before inventing wrappers. An ordinary copy, rename, draft comparison, or document edit does not normally need a manifest, hashing pass, script collection, or new project. Check the actual destination and usability as the task warrants. Use a digest when a real consumer needs byte identity or integrity, not as a substitute for reading or understanding the content.
+Use native file, editing, search, and version-control tools before inventing wrappers. An ordinary copy, rename, draft comparison, or document edit does not normally need a manifest, hashing pass, script collection, or new project. Check the actual destination and usability as the task warrants. Use a digest when a real consumer needs byte identity or integrity, not as a substitute for reading or understanding the content. Reuse existing checks or platform guarantees that cover the actual operation. Add a verification artifact only when an applicable requirement or consumer will use it; its mere existence is not assurance.
 
 Reuse the assigned checkout and branch. Create or switch a Git branch or worktree only for the requested delivery workflow, an applicable host/repository rule, or a concrete isolation need. Do not initialize Git for a non-Git task or treat another worker's uncommitted files as abandoned. Use existing recovery facilities; add a backup for an actual loss risk, especially before irreversible removal of a sole copy, not before every harmless action.
 

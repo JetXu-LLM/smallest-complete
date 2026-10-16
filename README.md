@@ -108,6 +108,11 @@ current consumers, sensitive data, and irreversible effects still require their
 own guarantees. Additional machinery and checks must address a real requirement
 or uncertainty, not merely an agent's earlier suggestion.
 
+Recovered notes retain the authority of the original decision. Review findings
+are resolved by their evidence and effect on the task; an unresolved concern
+limits the work that actually depends on it. Available writing guidance can
+help with substantial text without adding a required companion skill.
+
 ## In practice
 
 | You ask | Smallest Complete response |
